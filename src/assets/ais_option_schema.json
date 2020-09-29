@@ -1,0 +1,596 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "aisOptions": {
+      "type": "object",
+      "properties": {
+        "feedbackoption": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "optCode": {
+                  "type": "string"
+                },
+                "optDesc": {
+                  "type": "string"
+                },
+                "txtBfrCnfrm": {
+                  "type": "string"
+                },
+                "txtAftrCnfrm": {
+                  "type": "string"
+                },
+                "multiRowRespRqrd": {
+                  "type": "string"
+                },
+                "infoEditReqrd": {
+                  "type": "string"
+                },
+                "editProperties": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "optCode",
+                "optDesc",
+                "txtBfrCnfrm",
+                "txtAftrCnfrm",
+                "multiRowRespRqrd",
+                "infoEditReqrd",
+                "editProperties"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "optCode": {
+                  "type": "string"
+                },
+                "optDesc": {
+                  "type": "string"
+                },
+                "txtBfrCnfrm": {
+                  "type": "string"
+                },
+                "txtAftrCnfrm": {
+                  "type": "string"
+                },
+                "multiRowRespRqrd": {
+                  "type": "string"
+                },
+                "infoEditReqrd": {
+                  "type": "string"
+                },
+                "editProperties": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "optCode",
+                "optDesc",
+                "txtBfrCnfrm",
+                "txtAftrCnfrm",
+                "multiRowRespRqrd",
+                "infoEditReqrd",
+                "editProperties"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "optCode": {
+                  "type": "string"
+                },
+                "optDesc": {
+                  "type": "string"
+                },
+                "txtBfrCnfrm": {
+                  "type": "string"
+                },
+                "txtAftrCnfrm": {
+                  "type": "string"
+                },
+                "multiRowRespRqrd": {
+                  "type": "string"
+                },
+                "infoEditReqrd": {
+                  "type": "string"
+                },
+                "editProperties": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "enum": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            }
+                          ]
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "required"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "enum",
+                        "validators"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            },
+                            "regex": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "required",
+                            "regex"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "validators"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            },
+                            "regex": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "required",
+                            "regex"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "validators"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "enum": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            }
+                          ]
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "required"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "enum",
+                        "validators"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "enum": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            },
+                            {
+                              "type": "object",
+                              "properties": {
+                                "optionName": {
+                                  "type": "string"
+                                },
+                                "value": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "optionName",
+                                "value"
+                              ]
+                            }
+                          ]
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            }
+                          },
+                          "required": [
+                            "required"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "enum",
+                        "validators"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "seq": {
+                          "type": "integer"
+                        },
+                        "id": {
+                          "type": "integer"
+                        },
+                        "controlName": {
+                          "type": "string"
+                        },
+                        "dataType": {
+                          "type": "string"
+                        },
+                        "placeholder": {
+                          "type": "string"
+                        },
+                        "controlType": {
+                          "type": "string"
+                        },
+                        "validators": {
+                          "type": "object",
+                          "properties": {
+                            "required": {
+                              "type": "boolean"
+                            },
+                            "regex": {
+                              "type": "string"
+                            }
+                          },
+                          "required": [
+                            "required",
+                            "regex"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "seq",
+                        "id",
+                        "controlName",
+                        "dataType",
+                        "placeholder",
+                        "controlType",
+                        "validators"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "optCode",
+                "optDesc",
+                "txtBfrCnfrm",
+                "txtAftrCnfrm",
+                "multiRowRespRqrd",
+                "infoEditReqrd",
+                "editProperties"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "optCode": {
+                  "type": "string"
+                },
+                "optDesc": {
+                  "type": "string"
+                },
+                "txtBfrCnfrm": {
+                  "type": "string"
+                },
+                "txtAftrCnfrm": {
+                  "type": "string"
+                },
+                "multiRowRespRqrd": {
+                  "type": "string"
+                },
+                "infoEditReqrd": {
+                  "type": "string"
+                },
+                "editProperties": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "optCode",
+                "optDesc",
+                "txtBfrCnfrm",
+                "txtAftrCnfrm",
+                "multiRowRespRqrd",
+                "infoEditReqrd",
+                "editProperties"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "optCode": {
+                  "type": "string"
+                },
+                "optDesc": {
+                  "type": "string"
+                },
+                "txtBfrCnfrm": {
+                  "type": "string"
+                },
+                "txtAftrCnfrm": {
+                  "type": "string"
+                },
+                "multiRowRespRqrd": {
+                  "type": "string"
+                },
+                "infoEditReqrd": {
+                  "type": "string"
+                },
+                "editProperties": {
+                  "type": "array",
+                  "items": {}
+                }
+              },
+              "required": [
+                "optCode",
+                "optDesc",
+                "txtBfrCnfrm",
+                "txtAftrCnfrm",
+                "multiRowRespRqrd",
+                "infoEditReqrd",
+                "editProperties"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "feedbackoption"
+      ]
+    }
+  },
+  "required": [
+    "aisOptions"
+  ]
+}

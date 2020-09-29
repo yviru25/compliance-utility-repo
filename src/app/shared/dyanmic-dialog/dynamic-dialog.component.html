@@ -30,86 +30,55 @@
     </div>
     </h2><hr>
 <mat-dialog-content class="mat-typography">
-    <div class="main-section">
+<mat-card class="main-section">
 <section>
-    <div fxFlex="100" fxLayout="row">
-        <div fxFlex="25">
-            <div fxLayout="column">
-                <span>Information Code</span>
-                <span class="spanColor">TDS-192</span>
+    <div fxFlex="100">
+        <div fxFlex="100" *ngFor="let pm of data.parentMappingKeys">
+            <div fxLayout="row" *ngFor="let pcd of data.parentColumnDefs">
+              <div fxLayout="column"  *ngIf = "pcd.field === pm.keyId">
+                     <span>{{pcd.name}}</span>
+                    <span class="spanColor">{{pm.keyValue}}</span>
+                </div> 
             </div>
-        </div>
-        <div fxFlex="35">
-            <div fxLayout="column">
-                <span>Information Description</span>
-                <span class="spanColor">Salary Recieved From TDS</span>
-            </div>
-        </div>
-        <div fxFlex="25">
-            <div fxLayout="column">
-                <span>Information Source</span>
-                <span class="spanColor">AAACU2414K</span>
-            </div>
-        </div>
-        <div fxFlex>
-            <div fxLayout="column">
-                <span>TSN ID</span>
-                <span class="spanColor">TSN0001</span>
-            </div>
+            <!-- <span>{{pm.keyId}}</span>
+            <span class="spanColor">TDS-192</span> -->
         </div>
     </div>
 </section><br><br>
 <section>
-    <div fxFlex="100" fxFlex="100">
-        <div fxFlex="25">
-            <div fxLayout="column">
-                <span>Date Of Payment/Credit</span>
-                <span class="spanColor">18-May-2020</span>
-            </div>
-        </div>
-        <div fxFlex="35">
-            <div fxLayout="column">
-                <span>Amount Paid/Credit</span>
-                <span class="spanColor">10,100.00</span>
-            </div>
-        </div>
-        <div fxFlex="25">
-            <div fxLayout="column">
-                <span>TDS Deducted</span>
-                <span class="spanColor">1000</span>
-            </div>
-        </div>
-        <div fxFlex>
-            <div fxLayout="column">
-                <span>TDS Deposited</span>
-                <span class="spanColor">1000</span>
+    <div fxFlex="100" >
+        <div fxLayout="row" fxFlex="100" *ngFor="let chld of data.childColumnDef  let i=index" >
+            <div fxLayout="column" *ngFor="let sld of data.selectedDataList">
+                <span>{{chld.name}}</span>
+                <span class="spanColor">{{ sld[chld.field] }}</span>
             </div>
         </div>
     </div>
 </section>
-</div><br><br>
+</mat-card><br><br>
 <section class="feedbackOption">
     <div fxFlex="100" fxLayout="column">
-        <div *ngFor="let item of data.feedback let i= index"  fxLayout="column" style="padding: 5px;">
-            <mat-accordion>
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        {{item.opt_desc}}
-                    </mat-panel-title>
+        <div fxLayout="column" style="padding: 5px;">
+            <mat-accordion class="fix-radio-position" hideToggle="true">
+                <mat-expansion-panel *ngFor="let item of data.feedback let i= index" #pannel1>
+                  <mat-expansion-panel-header style="align-items: center">
+                    <mat-panel-description>
+                        <mat-radio-button [checked]="pannel1.expanded" name="fdb" id="panel-{{i}}">
+                            {{item.opt_desc}}
+                        </mat-radio-button>
+                    </mat-panel-description>
                   </mat-expansion-panel-header>
                   <div class="expand">
-                      <!-- [metaDataField]="data.metaDataInfoField" -->
                       <div class="example-container" *ngIf="item.opt_code === 'B'" >
                         <app-feedback-b 
-                          [metaInfo]="data.metaDataInfoField" [selectedDataList]="data.checkedInfoList" ></app-feedback-b>
+                          [metaInfo]="data.sourceMetaData" [selectedDataList]="data.selectedDataList" ></app-feedback-b>
                       </div>
                       <div class="example-container" *ngIf="item.opt_code === 'C'" >
                         <app-dynamic-form 
                           [formData]="data.feedback[i].edit_properties"></app-dynamic-form>
                       </div>
                       <div class="example-container" *ngIf="item.opt_code === 'D'" >
-                        <app-feedback-d [l1header]="data.l1headerList" [activeTrans]="data.activeTransList" [selectedDataList] = "data.checkedInfoList"></app-feedback-d> 
+                        <app-feedback-d [nestedData]="data.nestedInformation" [selectedDataList] = "data.checkedInfoList"></app-feedback-d> 
                       </div>
                   </div>
                   </mat-expansion-panel>

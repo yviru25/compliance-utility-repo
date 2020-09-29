@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 import { NgxIndexedDBModule, DBConfig } from 'ngx-indexed-db';
+
 
 const dbConfig: DBConfig  = {
   name: 'AIS_Utility',
@@ -39,6 +39,7 @@ const dbConfig: DBConfig  = {
   },
 ]
 };
+
 @NgModule({
   declarations: [
     AppComponent
@@ -46,14 +47,14 @@ const dbConfig: DBConfig  = {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
     SharedModule,
+    HttpClientModule,
+    AppRoutingModule,
     NgxIndexedDBModule.forRoot(dbConfig)
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ ],
+  entryComponents: [],
 })
 
 export class AppModule {

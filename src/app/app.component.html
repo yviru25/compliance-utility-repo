@@ -1,1 +1,120 @@
 <router-outlet></router-outlet>
+<!-- <div class="outerDiv">
+  <div class="card-header">
+    <h4 class="h4Class">{{aisPartADetails.description}}</h4>
+  </div>
+<mat-card>
+    <mat-card-content>
+       <div *ngIf="aisPartADetails.formInfo !== null" >
+           <div *ngFor="let item of aisPartADetails.formInfo.elements">
+              <div *ngIf="item.type === 'HorizontalLayout'" >
+                  <div fxFlex="100" fxLayout="row">
+                      <div fxFlex="40" *ngFor="let el of item.elements" >
+                            <label for="">{{el.label}}</label>
+                            <h4 class="h4Class">{{el.value}}</h4>
+                      </div>
+                  </div>
+              </div>
+              <div *ngIf="item.type === 'VerticalLayout'">
+                <div fxLayout="column">
+                  <div fxFlex *ngFor="let el of item.elements" >
+                        <label for="">{{el.label}}</label>
+                        <h4 class="h4Class">{{el.value}}</h4>
+                  </div>
+                </div>
+              </div><br>
+           </div>
+       </div>
+    </mat-card-content>
+</mat-card>
+<div class="partBDiv">
+<mat-tab-group>
+  <mat-tab *ngFor="let subParts of groupByInfoCode | keyvalue" [label]="subParts.value[0].description">
+    <div *ngFor="let item of subParts.value">
+       <mat-card *ngIf="item.subParts.length === 0">
+          <mat-card-subtitle style="color: cornflowerblue;">{{item.labelDescription}}</mat-card-subtitle>
+          <mat-card-content class="tableDiv">
+            <p-table [paginator]="false" [rows]="10" styleClass="p-datatable-sm" [columns]="item.columnDefs" [value]="item.rowData" dataKey="infoCode">
+              <ng-template pTemplate="header" let-columns>
+                  <tr>
+                      <th *ngIf="item.nestedInformation !== null"  style="width: 3rem"></th>
+                      <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                          {{col.name}} <p-sortIcon *ngIf="col.controls.sortable" [field]="col.field"></p-sortIcon>
+                      </th>
+                  </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData let-expanded="expanded" let-columns="columns">
+                  <tr>
+                      <td *ngIf="item.nestedInformation !== null">
+                        <a href="#" [pRowToggler]="rowData">
+                            <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+                        </a>
+                      </td>
+                      <td *ngFor="let col of columns" style="text-align: center;">
+                          {{rowData[col.field]}}
+                      </td>
+                  </tr>
+              </ng-template>
+              <ng-template pTemplate="rowexpansion" let-rowData>
+                <tr>
+                  <td colspan="9">
+                      <div class="p-p-3">
+                        <p-table [value]="rowData.nestedInformation.rowData" dataKey="infoCode">
+                          <ng-template pTemplate="header">
+                            <tr>
+                              <th style="width: 3rem;">
+                                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                              </th>
+                              <th *ngFor="let col of rowData.nestedInformation.columnDefs">
+                                {{col.name}}
+                              </th>
+                            </tr>
+                          </ng-template>
+                          <ng-template pTemplate="body" let-nestedInfo let-columns="columns">
+                            <tr>
+                                <td>
+                                  <p-tableCheckbox [value]="rowData.nestedInformation.rowData"></p-tableCheckbox>
+                                </td>
+                                <td *ngFor="let col of rowData.nestedInformation.columnDefs" style="text-align: center;">
+                                  {{ nestedInfo[col.field] }}
+                                </td>
+                            </tr>
+                          </ng-template>
+                        </p-table>
+                      </div>
+                    </td>
+                  </tr>
+                </ng-template>
+              </p-table>
+          </mat-card-content>
+       </mat-card>
+       <div *ngIf="item.subParts.length > 0">
+            <mat-tab-group>
+               <mat-tab *ngFor="let subPrts of item.subParts" [label]="subPrts.description">
+                  <mat-card class="tableDiv">
+                    <mat-card-subtitle style="color: cornflowerblue;">{{subPrts.labelDescription}}</mat-card-subtitle>
+                    <p-table [paginator]="false" [rows]="10" styleClass="p-datatable-sm" [columns]="subPrts.columnDefs" [value]="subPrts.rowData">
+                      <ng-template pTemplate="header" let-columns>
+                          <tr>
+                              <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                  {{col.name}} <p-sortIcon *ngIf="col.controls.sortable" [field]="col.field"></p-sortIcon>
+                              </th>
+                          </tr>
+                      </ng-template>
+                      <ng-template pTemplate="body" let-subPartRD let-columns="columns">
+                        <tr>
+                            <td *ngFor="let col of columns" style="text-align: center;">
+                                {{subPartRD[col.field]}}
+                            </td>
+                        </tr>
+                      </ng-template>
+                    </p-table>
+                  </mat-card>
+               </mat-tab>
+            </mat-tab-group>
+       </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>
+</div>
+</div> -->

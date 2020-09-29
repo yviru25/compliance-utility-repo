@@ -1,0 +1,238 @@
+{
+	"ais_form": {
+        "ais_id": "RGBPD8448V.01",
+        "revsn_id":"1",
+		"form_creation_info": {
+			"creation_info": {
+				"created_by": "Project Insight,ITD",
+				"creation_date": "08-04-2020"
+			},
+			"form_details": {
+				"fin_yr": "2018-19",
+				"assmnt_yr": "2019-20",
+				"form_ver": "1.0"
+			}
+		},
+		"entity_dtls": {
+			"entity_id": "RGBPD8448V",
+			"entity_type": "Individual",
+			"entity_particulars": [
+				{
+					"particular_type": "PAN",
+					"value": "RGBPD8448V",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Date of Birth",
+					"value": "10-OCT-1986",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Aadhar",
+					"value": "2345-0953-8097",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Mobile Number",
+					"value": "9999999112",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Name of Assessee",
+					"value": "SADASIVAN NAIR",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},	
+				{
+					"particular_type": "E-mail Address",
+					"value": "SADASIVAN.NAIR@gmail.com",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Address of Assessee",
+					"value": "28/16 UpkarBhawan, RAMNAGAR COLONY,Delhi",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "",
+					"value": "",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				}
+			],
+			"fathers_name": "Ram Nair",
+			"dob_or_date_of_Incorp": "17-04-1976"
+		},
+		"info_summary_dtls": [
+			{
+				"part_type": "A",
+				"part_desc": "TDS/TCS Information",
+				"cat_desc": "Part B1- Information relating to Tax deducted/collected at source",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "infoCode",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "infoDesc",
+						"displayseq": "2"
+					},
+					{
+						"label": "Information Value",
+						"label_id": "infoValue",
+						"displayseq": "3"
+					}
+				],
+				"data": [
+					{
+						"infoCode":"TDS-192",
+						"infoDesc":"Salary Received",
+						"infoValue":"20,00,000"
+					},
+					{
+						"infoCode":"TDS-194",
+						"infoDesc":"Dividend received",
+						"infoValue":"1,50,000"
+					},
+					{
+						"infoCode":"TDS-195",
+						"infoDesc":"Payments received in respect of a contract",
+						"infoValue":"3,00,000"
+					}
+				]
+				
+			},
+			{
+				"part_type": "B",
+				"part_desc": "SFT Information",
+				"cat_desc": "Part B2- Information relating to Specified Financial Transactions",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "infoCode",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "infoDesc",
+						"displayseq": "2"
+					},
+					{
+						"label": "Information Value",
+						"label_id": "infoValue",
+						"displayseq": "3"
+					}
+				],
+				"data": [
+					{
+						"infoCode":"SFT-004",
+						"infoDesc":"Cash deposit in an account other than current account",
+						"infoValue":"10,00,000"
+					},
+					{
+						"infoCode":"SFT-008",
+						"infoDesc":"Purchase of shares",
+						"infoValue":"20,00,000"
+					}
+				]
+				
+			},
+			{
+				"part_type": "C",
+				"part_desc": "Payment of Taxes",
+				"cat_desc": "Part B3- Information relating to Payment of Taxes",
+				"smmry_header_field": [
+					{
+						"label": "Payment Type (Minor head)",
+						"label_id": "paymentType",
+						"displayseq": "1"
+					},
+					{
+						"label": "Amount",
+						"label_id": "amount",
+						"displayseq": "2"
+					}
+				],
+				"data": [
+					{
+						"paymentType":"Advance Tax Payment (100)",
+						"amount":"10,00,0000"
+					},
+					{
+						"paymentType":"Self Assessment Tax Payment (400)",
+						"amount":"15,00,0000"
+					}
+				]
+				
+			},
+			{
+				"part_type": "D",
+				"part_desc": "Demand and Refund",
+				"cat_desc": "Part B4. Information relating to Demand and Refund",
+				"subCat": [
+					{
+						"catName":"Demand",
+						"smmry_header_field": [
+							{
+								"label": "Payment Type (Minor head)",
+								"label_id": "paymentType",
+								"displayseq": "1"
+							},
+							{
+								"label": "Amount",
+								"label_id": "amount",
+								"displayseq": "2"
+							}
+						],
+						"data": [
+							{
+								"paymentType":"Advance Tax Payment (100)",
+								"amount":"10,00,0000"
+							},
+							{
+								"paymentType":"Self Assessment Tax Payment (400)",
+								"amount":"15,00,0000"
+							}
+						]
+					},
+					{
+						"catName":"Refund",
+						"smmry_header_field": [
+							{
+								"label": "Payment Type (Minor head)",
+								"label_id": "paymentType",
+								"displayseq": "1"
+							},
+							{
+								"label": "Amount",
+								"label_id": "amount",
+								"displayseq": "2"
+							}
+						],
+						"data": [
+							{
+								"paymentType":"Advance Tax Payment (100)",
+								"amount":"10,00,0000"
+							},
+							{
+								"paymentType":"Self Assessment Tax Payment (400)",
+								"amount":"15,00,0000"
+							}
+						]
+					}
+					
+				]
+				
+			}
+			
+		]
+	}
+}

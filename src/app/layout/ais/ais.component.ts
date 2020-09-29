@@ -7,8 +7,6 @@ import { PopupMsgDialogComponent } from '../../shared/feedback/popup-msg-dialog/
 import { BulkDialogComponent } from '../../shared/bulk-dialog/bulk-dialog.component';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
 export let selectedInfoCode: any;
-
-
 @Component({
   selector: 'app-ais',
   templateUrl: './ais.component.html',
@@ -16,174 +14,238 @@ export let selectedInfoCode: any;
   providers: [SharedServices]
 })
 export class AisComponent implements OnInit {
+  public aisPartBDetails: any;
+  public aisSubPartBDetails: any;
+  public aisPartADetails: any;
+  public aisPartBJsonDetail = {};
+  public groupByPartLabel = {};
+  public  sourceInfoMetaData = [];
+  public selectedKeyInfo: any;
+  public expanded: Boolean;
+  public feedbackOption: any;
+  public a2 = [
+                {
+                  'key': 'infoCode',
+                  'value': 'TDS-192'
+                },
+                {
+                  'key': 'infoCategory',
+                  'value': 'Salaries'
+                },
+                {
+                  'key': 'infoSource',
+                  'value': 'Punjab National Bank (TANXXXXXXX)'
+                }
+          ];
+  public a1 =
+            [
+              {
+                'key': 'infoCode',
+                'value': 'TDS-193'
+              },
+              {
+                'key': 'infoCategory',
+                'value': 'Salaries'
+              },
+              {
+                'key': 'infoSource',
+                'value': 'Punjab National Bank (TANXXXXXXX)'
+              }
+          ];
     constructor(private service: SharedServices, private route: Router,
       private dialog: MatDialog, private dbService: NgxIndexedDBService) {
+        this.checkIfObjectsAreSame(this.a1, this.a2);
     }
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    entityDtls: any;
-    aisForm: any;
-    entityParticulars: any;
-    basicDetails: any;
-    infoSmryDetails = [];
-    groupByInfoCode = {};
-    displayedColumns = ['infoCode', 'infoDesc', 'amountSum'];
-    dataSource = null;
-    dataList = [];
-    infoSmry = [];
-    infoSmryData = [];
-    keyValue = [];
-    l2DataList = [];
-    activeTransList = [];
-    actvList = [];
-    keyValueForL1 = [];
-    length = 0;
-    jsonImportedData = [];
-    finYear: any;
-    feedbackOption = [];
-    infoMetaData = [];
-    l1CheckedDataList = [];
     ngOnInit() {
-
-        // this.dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
-        this.dbService.getAll('file_import_data').then( res => {
-             console.log(res);
-        });
-
-        this.service.getInternalHttpRequest('assets/info_metadata.json').subscribe( res => {
-           this.infoMetaData = res.info_data_metadata;
-           console.log(this.infoMetaData);
-        });
-
-
-        this.dbService.getAll('file_import_data').then( res => {
-            this.entityDtls = res[0]['data']['ais_form'].entity_dtls;
-            this.aisForm = res[0]['data']['ais_form'].ais_id;
-            this.entityParticulars = res[0]['data']['ais_form'].entity_dtls.entity_particulars;
-            this.basicDetails = res[0]['data']['ais_form'].form_creation_info.form_details;
-            this.infoSmryDetails = res[0]['data']['ais_form'].info_summary_dtls;
-            this.infoSmryDetails.forEach(el => {
-                this.dataList = [];
-                this.actvList = [];
-                this.l2DataList = [];
-                this.dataList.push(el);
-                this.getTransposeDataList();
-                this.activeTransactionList(el.active_trans);
-                this.groupByInfoCode [el.part_type] = this.groupByInfoCode [el.part_type] || [];
-                this.groupByInfoCode [el.part_type].push(
-                    {
-
-                        infoCode: el.info_code,
-                        infoDesc: el.info_desc,
-                        amountSum: el.amount_sum,
-                        partType: el.part_type,
-                        partDesc: el.part_desc,
-                        infoSmryHeader: el.smmry_header_field,
-                        infoL1SmryHdr: el.information_header_field,
-                        infoSmryList: this.l2DataList,
-                        activeTrsnList: this.actvList
-                    }
-                );
-            });
-            console.log(this.groupByInfoCode);
-        });
-    }
-    /* ngAfterViewInit() {
-        this.dataSource.paginator = this.paginator;
-    } */
-
-    getL2InfoList(infoCode: string) {
-        selectedInfoCode = infoCode;
-        this.route.navigate(['dashboard/ais-l2']);
-    }
-
-    getTransposeDataList() {
-        this.l2DataList = [];
-        this.infoSmryData = [];
-        this.keyValue = [];
-        this.dataList.forEach(el2 => {
-            this.infoSmry = el2.info_smry;
-      });
-      for (let i = 0; i < this.infoSmry.length; i++) {
-           this.infoSmryData.push(this.infoSmry[i].data);
-      }
-      // console.log(this.infoSmryData);
-      // console.log(this.infoSmry);
-
-      let lebelId;
-      let value;
-      for (let i = 0; i < this.infoSmryData.length; i++) {
-        const map = new Map<string, string>();
-        for (let j = 0; j < this.infoSmryData[i].length; j++) {
-            lebelId = this.infoSmryData[i][j].label_id;
-            value = this.infoSmryData[i][j].value;
-            map.set(lebelId, value);
+      this.dbService.getAll('file_import_data').then( res => {
+        this.aisPartBDetails = res[0]['data']['ais']['parts'];
+        this.aisPartADetails = this.aisPartBDetails[0];
+        this.aisSubPartBDetails = this.aisPartBDetails[1].subParts;
+        this.aisSubPartBDetails.forEach(el => {
+         this.groupByPartLabel [el.label] = this.groupByPartLabel [el.label] || [];
+        if (el.infoDtls !== null && el.infoDtls.nestedInformation !== null) {
+          this.groupByPartLabel [el.label].push(
+            {
+                type: el.type,
+                description: el.description,
+                label: el.label,
+                labelDescription: el.labelDescription,
+                formInfo: el.formInfo,
+                columnDefs: el.infoDtls.columnDefs,
+                columnDisplayed: this.convertJsonObjectToString(el.infoDtls.columnDefs),
+                nestedInformation: el.infoDtls.nestedInformation,
+                mappingKey: el.infoDtls.nestedInformation.data.sourceData,
+                // tslint:disable-next-line:max-line-length
+                rowData: this.convertSpecficJsonLayout(el.infoDtls.data, el.infoDtls.nestedInformation.metaData, el.infoDtls.nestedInformation.data),
+                subParts: el.subParts
+            }
+          );
+        } else if (el.infoDtls !== null && el.infoDtls.nestedInformation === null) {
+          this.groupByPartLabel [el.label].push(
+            {
+                type: el.type,
+                description: el.description,
+                label: el.label,
+                labelDescription: el.labelDescription,
+                formInfo: el.formInfo,
+                columnDefs: el.infoDtls.columnDefs,
+                columnDisplayed: this.convertJsonObjectToString(el.infoDtls.columnDefs),
+                nestedInformation: el.infoDtls.nestedInformation,
+                rowData: this.ConvertJsonArrayToObjectKeyValue(el.infoDtls.data),
+                subParts: el.subParts
+            }
+          );
+        } else {
+          this.groupByPartLabel [el.label].push(
+            {
+              type: el.type,
+              description: el.description,
+              label: el.label,
+              labelDescription: el.labelDescription,
+              formInfo: el.formInfo,
+              columnDefs: null,
+              nestedInformation: null,
+              rowData: null,
+              subParts: this.convertSubPartJsonArray(el.subParts)
+            }
+          );
         }
-        this.keyValue.push(map);
-      }
-
-      this.keyValue.forEach( el => {
-        const jsonObject = {};
-       // console.log(el);
-        el.forEach((keys, values) => {
-          jsonObject[values] = keys;
         });
-        this.l2DataList.push(jsonObject);
+        console.log(this.groupByPartLabel);
+      });
+
+      this.service.getInternalHttpRequest('assets/info_metadata.json').subscribe( res => {
+          this.sourceInfoMetaData = res.sourceInfoMetaData;
+          // console.log(this.sourceInfoMetaData);
       });
     }
+    ConvertArrayToObjectKeyValue(jsonArray: any): any {
+      const jsonObject = {};
+      for (let i = 0; i < jsonArray.length; i++) {
+        const elem = jsonArray[i];
+        jsonObject[elem.keyId] = elem.keyValue;
+      }
+      return jsonObject;
+    }
+    ConvertJsonArrayToObjectKeyValue(jsonArrayData: any): any {
+      const returnArrayObject = [];
+      for (let i = 0; i < jsonArrayData.length; i++) {
+        const jsonObject = {};
+        for (let j = 0; j < jsonArrayData[i].colData.length; j++) {
+          const elem = jsonArrayData[i].colData[j];
+          jsonObject[elem.field] = elem.value;
+        }
+        returnArrayObject.push(jsonObject);
+      }
+      return returnArrayObject;
+    }
 
-    public activeTransactionList(activeList) {
-        this.actvList = [];
-        this.activeTransList = [];
-        this.keyValueForL1 = [];
-        const activeTrsnSumm = [];
-        activeList.forEach(element => {
-          activeTrsnSumm.push(element);
-      });
-      activeTrsnSumm.forEach( elm => {
-         this.activeTransList.push(elm.data);
-      });
-     // console.log(this.activeTransList);
-     let lebelId;
-     let value;
-      for (let i = 0; i < this.activeTransList.length; i++) {
-          const map = new Map<string, string>();
-          for (let j = 0; j < this.activeTransList[i].length; j++) {
-              lebelId = this.activeTransList[i][j].label_id;
-              value = this.activeTransList[i][j].value;
-              map.set(lebelId, value);
+    convertJsonArrayToObject(dataArray: any): any {
+      const returnArrayObject = [];
+      for (let i = 0; i < dataArray.length; i++) {
+        const jsonObject = {};
+        for (let j = 0; j < dataArray[i].mappingKey.key.length; j++) {
+          const elem = dataArray[i].mappingKey.key[j];
+          jsonObject[elem.keyId] = elem.keyValue;
+          jsonObject['sourceData'] = this.ConvertJsonArrayToObjectKeyValue(dataArray[i].sourceData);
+        }
+        returnArrayObject.push(jsonObject);
+      }
+      return returnArrayObject;
+    }
+    convertJsonArrayToObjectColumn(dataArray: any): any {
+      const returnArrayObject = [];
+      for (let i = 0; i < dataArray.length; i++) {
+        const jsonObject = {};
+        for (let j = 0; j < dataArray[i].mappingKey.key.length; j++) {
+          const elem = dataArray[i].mappingKey.key[j];
+          jsonObject[elem.keyId] = elem.keyValue;
+          jsonObject['columnDefs'] = dataArray[i].columnDefs;
+        }
+        returnArrayObject.push(jsonObject);
+      }
+      return returnArrayObject;
+    }
+
+    convertSpecficJsonLayout(rowData: any, childColDefs: any, childRowData: any) {
+        const dataR = this.ConvertJsonArrayToObjectKeyValue(rowData);
+        const chldCol = this.convertJsonArrayToObjectColumn(childColDefs);
+        const chldDataR = this.convertJsonArrayToObject(childRowData);
+        const jsonArray = [];
+        for (let pd = 0; pd < dataR.length; pd++) {
+              for (let ccol = 0; ccol < chldCol.length; ccol++) {
+                  if (dataR[pd].infoCode === chldCol[ccol].infoCode && dataR[pd].infoCategory === chldCol[ccol].infoCategory) {
+                           const jb = {
+                              nestedInformation: {}
+                           };
+                          // tslint:disable-next-line:forin
+                          for (const key in dataR[pd]) {
+                              jb[key] = dataR[pd][key];
+                          }
+                          jb.nestedInformation['columnDefs'] = chldCol[ccol].columnDefs;
+                          for (let cd = 0; cd < chldDataR.length; cd++) {
+                            if (dataR[cd].infoCode === chldDataR[cd].infoCode &&
+                                // tslint:disable-next-line:max-line-length
+                                dataR[pd].infoCategory === chldDataR[cd].infoCategory && dataR[pd].infoSource === chldDataR[cd].infoSource) {
+                                  jb.nestedInformation['rowData'] = chldDataR[cd].sourceData;
+                            }
+                          }
+                          jsonArray.push(jb);
+                       // return jb;
+                  }
+              }
+        }
+        return jsonArray;
+    }
+
+    convertSubPartJsonArray(subPartArrayList: any): any {
+          const returnArray = [];
+          for (let index = 0; index < subPartArrayList.length; index++) {
+            const jsonObject = {};
+            jsonObject['type'] = subPartArrayList[index].type;
+            jsonObject['description'] = subPartArrayList[index].description;
+            jsonObject['label'] = subPartArrayList[index].label;
+            jsonObject['labelDescription'] = subPartArrayList[index].labelDescription;
+            jsonObject['formInfo'] = subPartArrayList[index].formInfo;
+            jsonObject['columnDefs'] = subPartArrayList[index].infoDtls.columnDefs;
+            jsonObject['nestedInformation'] = subPartArrayList[index].infoDtls.nestedInformation;
+            jsonObject['rowData'] = this.ConvertJsonArrayToObjectKeyValue(subPartArrayList[index].infoDtls.data);
+            jsonObject['subParts'] = subPartArrayList[index].subParts;
+            returnArray.push(jsonObject);
           }
-          this.keyValueForL1.push(map);
-      }
-      // console.log(this.keyValue);
-      this.keyValueForL1.forEach( el => {
-           const jsonObject = {};
-          // console.log(el);
-           el.forEach((keys, values) => {
-             jsonObject[values] = keys;
-           });
-           this.actvList.push(jsonObject);
-      });
-      // console.log(this.actvList);
-    }
-    OnPageChange(evnt, dataList) {
-      const startIndex = evnt.pageIndex * evnt.pageSize;
-      let endIndex = startIndex + evnt.pageSize;
-      if (endIndex > this.length) {
-          endIndex = this.length;
-      }
+          return returnArray;
     }
 
+    convertJsonObjectToString(dataList: any): any {
+          const arrayOfString = [];
+          for (let index = 0; index < dataList.length; index++) {
+            arrayOfString.push(dataList[index].name);
+          }
+          return arrayOfString;
+    }
 
-    openDialog(selectedData, selectedL1Header, actvTrnsList) {
-      console.log(this.l1CheckedDataList);
-      if (this.l1CheckedDataList.length > 0) {
-        if (this.l1CheckedDataList.length === 1) {
-          let filteredMetaData = [];
-          this.infoMetaData.forEach(el => {
-              filteredMetaData = this.infoMetaData.filter( f => f.info_code === selectedData.infoCode);
-              console.log(filteredMetaData);
-          });
+    getFieldOfSourceMetaDataInfo(metaData: any, selectedDataMapping: any) {
+         let returnObject: any = [];
+         for (let index = 0; index < metaData.length; index++) {
+             if (this.checkIfObjectsAreSame(selectedDataMapping, metaData[index].mappingKey)) {
+                returnObject = metaData[index].field;
+             }
+         }
+         // console.log(returnObject);
+        return returnObject;
+    }
+
+    checkIfObjectsAreSame(obj1: any, obj2: any): Boolean {
+        const x = this.ConvertArrayToObjectKeyValue(obj1);
+        const y = this.ConvertArrayToObjectKeyValue(obj2);
+        const returnObject: boolean = Object.keys(x).length === Object.keys(y).length && Object.keys(x).every(p => x[p] === y[p]);
+        return returnObject;
+    }
+
+    openDialog(parentColumnDefs, parentRowData, childColumnDef, mappingKey, nestedInfo) {
+       if (this.selectedKeyInfo.length > 0) {
+        if (this.selectedKeyInfo.length === 1) {
           this.service.getInternalHttpRequest('assets/options.json').subscribe( res => {
                 this.feedbackOption = res.ais_options.feedbackoption;
                 const dialogRef = this.dialog.open(DynamicDialogComponent , {
@@ -191,17 +253,22 @@ export class AisComponent implements OnInit {
                   maxWidth: 'none !important',
                   data: {
                     feedback: this.feedbackOption,
-                    metaDataInfoField: this.infoMetaData[0].field,
-                    checkedInfoList: this.l1CheckedDataList,
-                    l1headerList: selectedL1Header,
-                    activeTransList: actvTrnsList
+                    parentColumnDefs: parentColumnDefs,
+                    parentRowData: parentRowData,
+                    childColumnDef: childColumnDef,
+                    selectedDataList: this.selectedKeyInfo,
+                    parentMappingKeys: mappingKey.key,
+                    nestedInformation: nestedInfo,
+                    sourceMetaData: this.getFieldOfSourceMetaDataInfo(this.sourceInfoMetaData, mappingKey.key)
                   }
                 });
                 dialogRef.afterClosed().subscribe(result => {
                   console.log(`Dialog result: ${result}`);
                 });
           });
-        } else {
+        }
+      }
+      /*  } else {
             const dialogRef = this.dialog.open(BulkDialogComponent , {
               width: 'auto',
               maxWidth: 'none !important',
@@ -229,47 +296,15 @@ export class AisComponent implements OnInit {
         dialogRef.afterClosed().subscribe(result => {
           console.log(`Dialog result: ${result}`);
         });
-      }
+      } */
     }
 
-    checkBoxCheck(event, selectedInfoHeader, selectedData) {
-      /* console.log(event.checked);
-      console.log(selectedInfoHeader);  */
-      if (event.checked) {
-        this.l1CheckedDataList.push(selectedData);
-        console.log(this.l1CheckedDataList);
-      } else {
-         for (let i = 0; i < this.l1CheckedDataList.length; i++) {
-               if (this.l1CheckedDataList[i].tsn_id === selectedData.tsn_id) {
-                 console.log(i);
-                 this.l1CheckedDataList.splice(i, 1);
-          }
-         }
-         console.log(this.l1CheckedDataList);
+    expandRow(isExpande) {
+      this.expanded = isExpande;
+      console.log(this.expanded);
+      if (this.expanded) {
+          this.selectedKeyInfo = [];
       }
+     // console.log(this.selectedKeyInfo);
     }
-
-
-
-    /* onFileSelected(event): void {
-      const file = event.srcElement.files[0];
-      if (file) {
-          const jsonData: any = [];
-          let jsonArray;
-          const reader = new FileReader();
-          reader.readAsText(file, 'UTF-8');
-          reader.onload = function (evt) {
-              jsonData.push(evt.target.result);
-              jsonArray = JSON.parse(jsonData);
-              this.jsonImportedData = jsonArray;
-              console.log(this.jsonImportedData);
-          };
-          reader.onerror = function (evt) {
-              alert('error reading file');
-          };
-          this.entityParticulars = this.jsonImportedData.ais_form.entity_dtls.entity_particulars;
-          console.log(this.entityParticulars);
-      }
-    } */
-
 }

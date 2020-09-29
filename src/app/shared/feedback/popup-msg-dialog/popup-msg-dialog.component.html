@@ -1,6 +1,22 @@
-<div mat-dialog-content>
-  <p>{{data.message}}</p>
+<div *ngIf="data.type === 'msg'">
+  <div mat-dialog-content>
+    <p>{{data.message}}</p>
+  </div>
+  <div mat-dialog-actions fxLayoutAlign="center">
+    <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+  </div>
 </div>
-<div mat-dialog-actions fxLayoutAlign="center">
-  <button mat-button mat-dialog-close cdkFocusInitial>Ok</button>
+<div *ngIf="data.type === 'confirm'" >
+
+    <div class="pop-box">
+        <div fxLayoutAlign="center">
+
+       <img style="height: 50px; width: 50px;" src="assets/images/exclamation-mark.png" />
+        </div>
+       <h3 class="text-msg">Are you sure you want to close App</h3>
+    </div>
+    <div mat-dialog-actions fxLayoutAlign="center">
+      <button class="btn-no" mat-button mat-dialog-close cdkFocusInitial>No</button>
+      <button class="btn-yes" mat-button>Yes</button>
+    </div>
 </div>

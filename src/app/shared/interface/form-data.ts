@@ -1,4 +1,5 @@
 export interface FormData {
+    labelId: any;
     id?: number;
     seqId?: number;
     controlName: string;

@@ -1,6 +1,6 @@
 {
   "name": "compliance-utility",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "main.js",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "electron": "ng build && electron .",
-    "electron-packager": "electron-packager . Compliance-Utility --ignore=node_modules"
+    "electron-packager": "electron-packager . Compliance-Utility --ignore=node_modules",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --ignore=node_modules/electron --prune=true --out=release-builds",
+    "package-win": "electron-packager . compliance-utility --platform win32",
+    "electron-build": "electron-packager . --all"
+  },
+  "build": {
+    "appId": "com.compliance",
+    "mac": {
+      "category": "Utility"
+    }
   },
   "private": true,
   "dependencies": {
@@ -25,13 +34,17 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@types/electron": "^1.6.10",
     "core-js": "^2.5.4",
     "file-saver": "^2.0.2",
     "hammerjs": "^2.0.8",
+    "jquery": "^3.5.1",
     "ngx-indexed-db": "^5.0.5",
+    "primeicons": "^4.0.0",
+    "primeng": "^8.0.0",
     "rxjs": "~6.3.3",
-    "sqlite-ts": "^0.1.0",
     "tslib": "^1.9.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -39,12 +52,15 @@
     "@angular/cli": "~7.2.4",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
+    "@igniteui/angular-schematics": "~10.1.610",
+    "@types/hammerjs": "^2.0.36",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "~8.9.4",
+    "@types/node": "^8.9.5",
     "codelyzer": "~4.5.0",
     "electron": "^8.2.1",
-    "electron-packager": "^15.0.0",
+    "electron-builder": "^22.8.0",
+    "electron-reload": "^1.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",

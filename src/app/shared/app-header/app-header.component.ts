@@ -2,18 +2,34 @@ import { Component, OnInit } from '@angular/core';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
 import { Router } from '@angular/router';
 import { saveAs } from 'file-saver';
-
+import { ElectronService } from '../electron-service';
+import { MatDialog } from '@angular/material';
+import { PopupMsgDialogComponent } from '../feedback/popup-msg-dialog/popup-msg-dialog.component';
 @Component({
   selector: 'app-header',
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent implements OnInit {
+  constructor(private dbService: NgxIndexedDBService,
+    private route: Router,
+    private electronService: ElectronService,
+    private dialog: MatDialog) {
+   }
   fileContent: string | ArrayBuffer;
 
-  constructor(private dbService: NgxIndexedDBService, private route: Router) { }
-
   ngOnInit() {
+  }
+
+  closeApp() {
+    const dialogRef = this.dialog.open(PopupMsgDialogComponent , {
+      width: 'auto',
+      maxWidth: 'none !important',
+      data: {
+        type: 'confirm'
+      }
+    });
+    // this.electronService.remote.app.quit();
   }
 
   AisfileImport(event) {

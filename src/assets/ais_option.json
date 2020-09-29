@@ -1,0 +1,161 @@
+{
+    "aisOptions": {
+        "feedbackoption": [
+            {
+                "optCode": "A",
+                "optDesc": "Information is correct",
+                "txtBfrCnfrm": "text",
+                "txtAftrCnfrm": "text",
+                "multiRowRespRqrd": "N",
+                "infoEditReqrd": "N",
+                "editProperties": []
+            },
+            {
+                "optCode": "B",
+                "optDesc": "Information is not fully correct",
+                "txtBfrCnfrm": "text",
+                "txtAftrCnfrm": "text",
+                "multiRowRespRqrd": "N",
+                "infoEditReqrd": "Y",
+                "editProperties": []
+            },
+            {
+                "optCode": "C",
+                "optDesc": "Information relates to other Person\/Year",
+                "txtBfrCnfrm": "text",
+                "txtAftrCnfrm": "text",
+                "multiRowRespRqrd": "Y",
+                "infoEditReqrd": "N",
+                "editProperties": [
+                    {
+                        "seq": 1,
+                        "id": 1,
+                        "controlName": "Self\/Other person",
+                        "labelId": "self_other_person",
+                        "dataType": "String",
+                        "placeholder": "Select",
+                        "controlType": "Select",
+                        "enum": [
+                            {
+                                "optionName": "Self",
+                                "value": "self"
+                            },
+                            {
+                                "optionName": "Other",
+                                "value": "other"
+                            }
+                        ],
+                        "validators": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "seq":2,
+                        "id": 2,
+                        "controlName": "Pan",
+                        "labelId": "pan",
+                        "dataType": "String",
+                        "placeholder": "Enter Pan",
+                        "controlType": "text",
+                        "validators": {
+                            "required": true,
+                            "regex": "[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                        }
+                    },
+                    {
+                        "seq": 3,
+                        "id": 2,
+                        "controlName": "Pan Name",
+                        "labelId": "pan_name",
+                        "dataType": "String",
+                        "placeholder": "Enter Pan Name",
+                        "controlType": "text",
+                        "validators": {
+                            "required": true,
+                            "regex": ""
+                        }
+                    },
+                    {
+                        "seq": 4,
+                        "id": 4,
+                        "controlName": "Relationship",
+                        "labelId": "relationship",
+                        "dataType": "String",
+                        "placeholder": "Select Relationship",
+                        "controlType": "Select",
+                        "enum": [
+                            {
+                                "optionName": "Son",
+                                "value": "son"
+                            },
+                            {
+                                "optionName": "Father",
+                                "value": "father"
+                            },
+                            {
+                                "optionName": "Mother",
+                                "value": "mother"
+                            }
+                        ],
+                        "validators": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "seq": 5,
+                        "id": 5,
+                        "controlName": "F.Y",
+                        "labelId": "fin_year",
+                        "dataType": "String",
+                        "placeholder": "Select F.Y",
+                        "controlType": "Select",
+                        "enum": [
+                            {
+                                "optionName": "2018-19",
+                                "value": "2018"
+                            },
+                            {
+                                "optionName": "2019-20",
+                                "value": "2019"
+                            }
+                        ],
+                        "validators": {
+                            "required": true
+                        }
+                    },
+                    {
+                        "seq":6,
+                        "id": 6,
+                        "controlName": "Amount",
+                        "labelId": "amount",
+                        "dataType": "number",
+                        "placeholder": "Enter Amount",
+                        "controlType": "numeric",
+                        "validators": {
+                            "required": true,
+                            "regex": "Pattern of Amount"
+                        }
+                    }
+                ]
+            },
+            {
+                "optCode": "D",
+                "optDesc": "Information is duplicate\/ included in other displayed information",
+                "txtBfrCnfrm": "text",
+                "txtAftrCnfrm": "text",
+                "multiRowRespRqrd": "text",
+                "infoEditReqrd": "text",
+                "editProperties": []
+            },
+            {
+                "optCode": "E",
+                "optDesc": "Information is denied",
+                "txtBfrCnfrm": "text",
+                "txtAftrCnfrm": "text",
+                "multiRowRespRqrd": "text",
+                "infoEditReqrd": "text",
+                "editProperties": []
+            }
+        ]
+    }
+}

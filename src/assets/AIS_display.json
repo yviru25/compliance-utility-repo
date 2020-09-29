@@ -18,20 +18,14 @@
 			"entity_type": "Individual",
 			"entity_particulars": [
 				{
-					"particular_type": "Pan",
+					"particular_type": "PAN",
 					"value": "RGBPD8448V",
 					"source": "PAN database",
 					"date": "06-04-2019"
 				},
 				{
-					"particular_type": "Name",
-					"value": "SADASIVAN NAIR",
-					"source": "PAN database",
-					"date": "06-04-2019"
-				},
-				{
-					"particular_type": "Mobile",
-					"value": "9999999112",
+					"particular_type": "Date of Birth",
+					"value": "10-OCT-1986",
 					"source": "PAN database",
 					"date": "06-04-2019"
 				},
@@ -40,16 +34,34 @@
 					"value": "2345-0953-8097",
 					"source": "PAN database",
 					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Mobile Number",
+					"value": "9999999112",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Name of Assessee",
+					"value": "SADASIVAN NAIR",
+					"source": "PAN database",
+					"date": "06-04-2019"
 				},	
 				{
-					"particular_type": "Email",
+					"particular_type": "E-mail Address",
 					"value": "SADASIVAN.NAIR@gmail.com",
 					"source": "PAN database",
 					"date": "06-04-2019"
 				},
 				{
-					"particular_type": "Address",
+					"particular_type": "Address of Assessee",
 					"value": "28/16 UpkarBhawan, RAMNAGAR COLONY,Delhi",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "",
+					"value": "",
 					"source": "PAN database",
 					"date": "06-04-2019"
 				}
@@ -512,13 +524,13 @@
 				"info_desc": "Salary Received (TDS Form 24Q, Section 192)",
 				"smmry_header_field": [
 					{
-						"label": "Info Code",
+						"label": "Information Code",
 						"label_id": "info_code",
 						"datatype": "string",
 						"displayseq": "1"
 					},
 					{
-						"label": "Info Description",
+						"label": "Information Description",
 						"label_id": "info_description",
 						"datatype": "string",
 						"displayseq": "2"
@@ -750,13 +762,13 @@
 				"info_desc": "Salary Received (TDS Form 24Q, Section 192)",
 				"smmry_header_field": [
 					{
-						"label": "Info Code",
+						"label": "Information Code",
 						"label_id": "info_code",
 						"datatype": "string",
 						"displayseq": "1"
 					},
 					{
-						"label": "Info Description",
+						"label": "Information Description",
 						"label_id": "info_description",
 						"datatype": "string",
 						"displayseq": "2"

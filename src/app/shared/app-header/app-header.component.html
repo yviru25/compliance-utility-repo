@@ -1,11 +1,18 @@
 <div class="header">
-  <mat-toolbar color="default">
-    <mat-toolbar-row>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row style="height: 64px;">
       <span>
-        <img src="assets/images/portal-logo.png" alt="">
+        <img style="padding-top: 5px !important;" src="assets/images/u-logo.png" alt="">
       </span>
+      <span style="padding-left: 5px;color: white;">Compliance Utility</span>
       <span class="example-spacer"></span>
-      <img src="assets/images/insight-logo.png" alt="">
+      <span class="nav-end">
+        <img class="nav-end-el" src="assets/images/minimize.png" alt="">
+        <img class="nav-end-el" src="assets/images/maximize.png" alt="">
+        <img class="nav-end-el" src="assets/images/close.png" alt="" (click)="closeApp()" id="close-btn">
+       
+      </span>
+      <!-- <img src="assets/images/insight-logo.png" alt=""> -->
     </mat-toolbar-row>
   </mat-toolbar>
   <div fxLayout="row" class="nav" style="padding: 10px;">

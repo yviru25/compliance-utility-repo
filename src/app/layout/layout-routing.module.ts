@@ -19,14 +19,6 @@ const routes: Routes = [
             {
                 path: 'dashboard/ais',
                 loadChildren: './ais/ais.module#AisModule'
-            },
-            {
-                path: 'dashboard/ais-l1',
-                loadChildren: './ais/ais-l1/ais-l1.module#AisL1Module'
-            },
-            {
-                path: 'dashboard/ais-l2',
-                loadChildren: './ais/ais-l2/ais-l2.module#AisL2Module'
             }
         ]
     }

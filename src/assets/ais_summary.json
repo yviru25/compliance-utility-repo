@@ -1,0 +1,226 @@
+{
+    "aisForm": {
+        "aisId": "RGBPD8448V.01",
+        "revsnId": 1,
+        "formCreationInfo": {
+            "creationInfo": {
+                "createdBy": "Project Insight,ITD",
+                "creationDate": "08-04-2020"
+            },
+            "formDetails": {
+                "finYr": "2018-19",
+                "assmntYr": "2019-20",
+                "formVer": 1.0
+            }
+        },
+        "entityDtls": {
+            "entityId": "RGBPD8448V",
+            "entityType": "Individual",
+            "entityParticulars": [
+                {
+                    "particularType": "PAN",
+                    "value": "RGBPD8448V",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "Date of Birth",
+                    "value": "10-OCT-1986",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "Aadhar",
+                    "value": "2345-0953-8097",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "Mobile Number",
+                    "value": "9999999112",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "Name of Assessee",
+                    "value": "SADASIVAN NAIR",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "E-mail Address",
+                    "value": "SADASIVAN.NAIR@gmail.com",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                },
+                {
+                    "particularType": "Address of Assessee",
+                    "value": "28\/16 UpkarBhawan, RAMNAGAR COLONY,Delhi",
+                    "source": "PAN database",
+                    "date": "06-04-2019"
+                }
+            ],
+            "fathersName": "Ram Nair",
+            "dobOrDateOfIncorp": "17-04-1976"
+        },
+        "infoSummaryDtls": [
+            {
+                "partType": "A",
+                "partDesc": "TDS/TCS Information",
+                "catDesc": "Part B1- Information relating to Tax deducted/collected at source",
+                "smmryHeaderField": [
+                    {
+                        "label": "Information Code",
+                        "labelId": "infoCode",
+                        "displayseq": 1
+                    },
+                    {
+                        "label": "Information Description",
+                        "labelId": "infoDesc",
+                        "displayseq": 2
+                    },
+                    {
+                        "label": "Information Value",
+                        "labelId": "infoValue",
+                        "displayseq": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "infoCode": "TDS-192",
+                        "infoDesc": "Salary Received",
+                        "infoValue": 2000000
+                    },
+                    {
+                        "infoCode": "TDS-194",
+                        "infoDesc": "Dividend received",
+                        "infoValue": 150000
+                    },
+                    {
+                        "infoCode": "TDS-195",
+                        "infoDesc": "Payments received in respect of a contract",
+                        "infoValue": 300000
+                    }
+                ]
+            },
+            {
+                "partType": "B",
+                "partDesc": "SFT Information",
+                "catDesc": "Part B2- Information relating to Specified Financial Transactions",
+                "smmryHeaderField": [
+                    {
+                        "label": "Information Code",
+                        "labelId": "infoCode",
+                        "displayseq": 1
+                    },
+                    {
+                        "label": "Information Description",
+                        "labelId": "infoDesc",
+                        "displayseq": 2
+                    },
+                    {
+                        "label": "Information Value",
+                        "labelId": "infoValue",
+                        "displayseq": 3
+                    }
+                ],
+                "data": [
+                    {
+                        "infoCode": "SFT-004",
+                        "infoDesc": "Cash deposit in an account other than current account",
+                        "infoValue": 1000000
+                    },
+                    {
+                        "infoCode": "SFT-008",
+                        "infoDesc": "Purchase of shares",
+                        "infoValue": 2000000
+                    }
+                ]
+            },
+            {
+                "partType": "C",
+                "partDesc": "Payment of Taxes",
+                "catDesc": "Part B3- Information relating to Payment of Taxes",
+                "smmryHeaderField": [
+                    {
+                        "label": "Payment Type (Minor head)",
+                        "labelId": "paymentType",
+                        "displayseq": 1
+                    },
+                    {
+                        "label": "Amount",
+                        "labelId": "amount",
+                        "displayseq": 2
+                    }
+                ],
+                "data": [
+                    {
+                        "paymentType": "Advance Tax Payment (100)",
+                        "amount": 10000000
+                    },
+                    {
+                        "paymentType": "Self Assessment Tax Payment (400)",
+                        "amount": 15000000
+                    }
+                ]
+            },
+            {
+                "partType": "D",
+                "partDesc": "Demand and Refund",
+                "catDesc": "Part B4. Information relating to Demand and Refund",
+                "subCat": [
+                    {
+                        "catName": "Demand",
+                        "smmryHeaderField": [
+                            {
+                                "label": "Payment Type (Minor head)",
+                                "labelId": "paymentType",
+                                "displayseq": 1
+                            },
+                            {
+                                "label": "Amount",
+                                "labelId": "amount",
+                                "displayseq": 2
+                            }
+                        ],
+                        "data": [
+                            {
+                                "paymentType": "Advance Tax Payment (100)",
+                                "amount": 10000000
+                            },
+                            {
+                                "paymentType": "Self Assessment Tax Payment (400)",
+                                "amount": 15000000
+                            }
+                        ]
+                    },
+                    {
+                        "catName": "Refund",
+                        "smmryHeaderField": [
+                            {
+                                "label": "Payment Type (Minor head)",
+                                "labelId": "paymentType",
+                                "displayseq": 1
+                            },
+                            {
+                                "label": "Amount",
+                                "labelId": "amount",
+                                "displayseq": 2
+                            }
+                        ],
+                        "data": [
+                            {
+                                "paymentType": "Advance Tax Payment (100)",
+                                "amount": 10000000
+                            },
+                            {
+                                "paymentType": "Self Assessment Tax Payment (400)",
+                                "amount": 15000000
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

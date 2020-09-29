@@ -1,0 +1,148 @@
+{
+    "aisFeedbck": {
+        "aisId": "RGBPD8448V.01",
+        "revsnId": 1,
+        "submittedBy":"",
+        "infoCode":"",
+        "infoCategory":"",
+        "infoSource": "",
+        "feedbackLvl": "L1",
+        "feedback": [
+            {
+                "tsnId": "TSN0001",
+                "response": {
+                    "optnChosen": "A",
+                    "responseData":null
+                }
+            },
+            {
+                "tsnId": "TSN0002",
+                "response": {
+                    "optnChosen": "B",
+                    "responseData": {
+                        "row": [
+                            {
+                                "col": [
+                                    {
+                                        "key": "dateOfPayment",
+                                        "value": "18\/05\/2020"
+                                    },
+                                    {
+                                        "key": "amountPaidCredited",
+                                        "value": 5000
+                                    },
+                                    {
+                                        "key": "tdsDeducted",
+                                        "value": 5000
+                                    },
+                                    {
+                                        "key": "tdsDeposited",
+                                        "value": 5000
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "tsnId": "TSN0003",
+                "response": {
+                    "optnChosen": "C",
+                    "responseData": {
+                        "row": [
+                            {
+                                "col": [
+                                    {
+                                        "key": "selfOtherPerson",
+                                        "value": "Self"
+                                    },
+                                    {
+                                        "key": "pan",
+                                        "value": "AAACU2414K"
+                                    },
+                                    {
+                                        "key": "panName",
+                                        "value": "AXIS Bank"
+                                    },
+                                    {
+                                        "key": "relationship",
+                                        "value": "Son"
+                                    },
+                                    {
+                                        "key": "finYear",
+                                        "value": "2018-19"
+                                    },
+                                    {
+                                        "key": "amount",
+                                        "value": 2000000
+                                    }
+                                ]
+                            },
+                            {
+                                "col": [
+                                    {
+                                        "key": "selfOtherPerson",
+                                        "value": "Other"
+                                    },
+                                    {
+                                        "key": "pan",
+                                        "value": "AAACU2414K"
+                                    },
+                                    {
+                                        "key": "panName",
+                                        "value": "AXIS Bank"
+                                    },
+                                    {
+                                        "key": "relationship",
+                                        "value": "Son"
+                                    },
+                                    {
+                                        "key": "finYear",
+                                        "value": "2018-19"
+                                    },
+                                    {
+                                        "key": "amount",
+                                        "value": 2000000
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "tsnId": "TSN0004",
+                "response": {
+                    "optnChosen": "D",
+                    "responseData": {
+                        "row": [
+                            {
+                                "col": [
+                                    {
+                                        "key": "tsnId",
+                                        "value": "TSN00001"
+                                    }
+                                ]
+                            },
+                            {
+                                "col": [
+                                    {
+                                        "key": "tsnId",
+                                        "value": "TSN00002"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "tsnId": "TSN0001",
+                "response": {
+                    "optnChosen": "E"
+                }
+            }
+        ]
+    }
+}

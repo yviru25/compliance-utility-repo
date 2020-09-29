@@ -1,17 +1,7 @@
-<!-- <mat-grid-list cols="3" rowHeight="100px" [gutterSize]="'15px'">
-    <mat-grid-tile (click)="importJsonFile(tile.moduleId)" *ngFor="let tile of gridTileList"  
-    [colspan]="tile.cols" 
-    [rowspan]="tile.rows" 
-    >
-    <div fxLayout="column" fxLayoutAlign="start center">
-        <img [src]="tile.icon" />
-        <p>{{tile.moduleTitle}}</p> 
+  <div>
+    <div class="overview">
+       <h4 class="h4Text">Overview</h4>
     </div>
-    </mat-grid-tile>
-  </mat-grid-list> -->
-
-  <mat-tab-group mat-stretch-tabs>
-    <mat-tab label="Overview">
       <mat-list>
         <mat-list-item>
           <p>
@@ -34,8 +24,20 @@
           <p>4. It is a good practice to save your work frequently. Please use Save option for the same. </p>
         </mat-list-item>
         <mat-list-item>
-          <p>5. While entering the information in relevant fields/tables provided in the utility, user can use following facility: </p>
+          <p>5. While entering the information in relevant fields/tables provided in the utility, user can use following facility: 
         </mat-list-item>
+        <mat-list-item>
+          <p>1. <span style="font-size: 17px;" class="material-icons">
+            add_circle_outline
+            </span>
+             Clicking the icon will add the new row.</p>
+        </mat-list-item>
+        <mat-list-item>
+          <p>2. <span style="font-size: 17px;" class="material-icons">
+            delete_outline
+            </span>            
+             Clicking the icon will add the new row.</p>
+        </mat-list-item><br>
         <mat-list-item>
           <p>6. Kindly make sure there is no space before and after the text/information during copying such 
             data from any other information source. <br> Also, kindly check that the data is not pasted in exponential format. </p>
@@ -52,12 +54,16 @@
         <mat-list-item>
           <p>10. Once the file is submitted, an acknowledgement number will be generated for your future reference </p>
         </mat-list-item>
+        <mat-list-item>
+          <p><span class="bold-text">Version:</span> Utility-1.0</p>
+        </mat-list-item>
+        <mat-list-item>
+          <p>In case any issue please contact <span class="bold-text">18001034215</span></p>
+        </mat-list-item>
       </mat-list>
+    <!-- <mat-tab label="" style="display: none;">
     </mat-tab>
-    <mat-tab label="">
+    <mat-tab label="" style="display: none;">
 
-    </mat-tab>
-    <mat-tab label="">
-
-    </mat-tab>
-  </mat-tab-group>
+    </mat-tab> -->
+  </div>

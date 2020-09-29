@@ -7,6 +7,7 @@
   }
 .mat-toolbar-row, .mat-toolbar-single-row {
     height: 90px;
+    padding: 0px !important;
  }
 
  .navOption {
@@ -14,5 +15,18 @@
     text-decoration: none;
     font-size: initial;
     font-weight: 700;
-    color: #1a9fd4;
+    color: #1a4ad4;
+ }
+ /* .mat-toolbar {
+  background: #40a3ec !important;
+ } */
+ .nav-end {
+   padding: 5px;
+ }
+ .nav-end-el {
+    padding: 8px;
+    cursor: pointer;
+ }
+ #close-btn:hover {
+    background-color: rgb(143, 0, 0)
  }

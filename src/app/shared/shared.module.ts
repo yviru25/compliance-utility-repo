@@ -25,7 +25,7 @@ import { MatAutocompleteModule,
   MatRadioModule
 } from '@angular/material';
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { TableModule } from 'primeng/table';
 @NgModule({
   declarations: [],
   imports: [
@@ -51,8 +51,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatExpansionModule,
     MatTabsModule,
     MatRadioModule,
+    TableModule
   ],
   exports: [
+    CommonModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatIconModule,
@@ -73,11 +75,10 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatDialogModule,
     MatExpansionModule,
     MatTabsModule,
-    MatRadioModule
+    MatRadioModule,
+    TableModule
   ],
   providers: [
-    MatDatepickerModule,
-    MatNativeDateModule ,
   ],
 })
 export class SharedModule { }

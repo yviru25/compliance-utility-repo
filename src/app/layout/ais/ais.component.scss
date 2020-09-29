@@ -1,141 +1,27 @@
-/* table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-  } */
-
- /*  table, th, td {
-    border: 1px solid #bdbdbd;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 5px;
-    text-align: center;
-
-  } */
-  .borderBottom {
-     border-bottom: 1px solid #ccc;
-     padding: 5px;
-  }
-  .textAlignStart {
-     text-align: start;
-     font-weight: 500;
-     color: #616161;
-  }
-  .text-left {
-     text-align: left;
-  }
-  .text-th {
-     width: 160px;
-     text-align: left;
-  }
-
-  .arrow {
-    float: right;
-    background-color: #348eca;
-    border-radius: 50px;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin-left: 5px;
+mat-card {
+  background-color: #fff;
+  border-radius: 0 !important;
 }
-.mat-card {
-  transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
-  display: block;
-  position: relative;
-  /* padding: 5px !important; */
-  border-radius: 4px;
-  background: #e8e8e8;
+.tableDiv {
+ border: 0.5px solid #e6e6e6;
 }
-
-mat-form-field{
-    width: 400px;
+.mat-card:not([class*=mat-elevation-z]) {
+ box-shadow: 0 1px 2px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
 }
-mat-card-title{
-    text-align: center;
+.outerDiv {
+ padding: 20px;
 }
-
-
-/* >>>>>>>>>>>>>>> Table Accordian <<<<<<<<<<<<<<<<<<<< */
-
-
-.mat-accordion .mat-header-row {
-  padding-left: 1.5rem;
-  padding-right: 2rem;
-  border-bottom: none;
-  background: #eaeaea;
+.partBDiv {
+ border: 1px solid #e0e0e0;
 }
-
-.mat-expansion-panel-header.mat-row {
-  border-bottom: none;
+.card-header {
+ border: 1px solid #dedbdb;
+  /* padding: 15px; */
+  padding-left: 16px;
+  background: #ececec;
 }
-
-//copied from https://github.com/angular/material2/blob/master/src/lib/table/table.scss
-
-$mat-header-row-height: 56px;
-$mat-row-height: 48px;
-$mat-row-horizontal-padding: 24px;
-
-.mat-table {
-  display: block;
-}
-
-.mat-header-row {
-  min-height: $mat-header-row-height;
-}
-
-.mat-row {
-  min-height: $mat-row-height;
-}
-
-.mat-row, .mat-header-row {
-  display: flex;
-  border-bottom-width: 1px;
-  border-bottom-style: inset;
-  align-items: center;
-  padding: 0 $mat-row-horizontal-padding;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-
-  // Workaround for https://goo.gl/pFmjJD in IE 11. Adds a pseudo
-  // element that will stretch the row the correct height. See:
-  // https://connect.microsoft.com/IE/feedback/details/802625
-  &::after {
-    display: inline-block;
-    min-height: inherit;
-    content: '';
-  }
-}
-
-.mat-cell, .mat-header-cell {
-  flex: 1;
-  overflow: hidden;
-  word-wrap: break-word;
-}
-/* .mat-table-sticky {
-  border-right: 1px solid #e0e0e0;
-} */
-
-.mat-tab-label .mat-tab-label-content {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  font-size: large !important;
-  font-weight: initial !important;;
-}
-.mat-expansion-panel-body {
-  padding: 0 0 0 0 !important;
-}
-
-.mat-list-base .mat-subheader {
-  font-family: Roboto,"Helvetica Neue",sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-}
-.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
-  display: block;
-  height: 34px;
-  width: 100%;
-  padding: 0;
+.h4Class {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
 }

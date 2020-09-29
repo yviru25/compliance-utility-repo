@@ -1,0 +1,1504 @@
+{
+	"ais_form": {
+		"form_creation_info": {
+			"creation_info": {
+				"created_by": "Project Insight,ITD",
+				"creation_date": "08-04-2020"
+			},
+			"form_details": {
+				"fin_yr": "2018-19",
+				"assmnt_yr": "2019-20",
+				"form_ver": "1.0"
+			}
+		},
+		"ais_id": "RGBPD8448V.01",
+		"revsn_id":"1",
+		"entity_dtls": {
+			"entity_id": "RGBPD8448V",
+			"entity_type": "Individual",
+			"entity_particulars": [
+				{
+					"particular_type": "PAN",
+					"value": "RGBPD8448V",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Date of Birth",
+					"value": "10-OCT-1986",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Aadhar",
+					"value": "2345-0953-8097",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Mobile Number",
+					"value": "9999999112",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Name of Assessee",
+					"value": "SADASIVAN NAIR",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},	
+				{
+					"particular_type": "E-mail Address",
+					"value": "SADASIVAN.NAIR@gmail.com",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "Address of Assessee",
+					"value": "28/16 UpkarBhawan, RAMNAGAR COLONY,Delhi",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				},
+				{
+					"particular_type": "",
+					"value": "",
+					"source": "PAN database",
+					"date": "06-04-2019"
+				}
+			],
+			"fathers_name": "Ram Nair",
+			"dob_or_date_of_Incorp": "17-04-1976"
+		},
+		"info_summary_dtls": [
+			{
+				"info_code": "TDS-194A",
+				"part_type": "A",
+				"part_desc": "TDS/TCS Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Interest other than interest on securities (Sec 194A)",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "TSN Id",
+						"label_id": "tsn_id",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Date of Payment/Credit",
+						"label_id": "date_of_payment",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Amount Paid/Credited",
+						"label_id": "amount_paid_credited",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "TDS Deducted",
+						"label_id": "tds_deducted",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "TDS Deposited",
+						"label_id": "tds_deposited",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Reported on",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "7"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "tsn_id",
+								"value": "TSN0001"
+							  },
+							  {
+								"label_id": "date_of_payment",
+								"value": "30-06-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "4,000.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "400.00"
+							  },
+							  {
+								"label_id": "tds_deposited",
+								"value": "400.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "15-07-2018"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    },
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+                             {
+								"label_id": "tsn_id",
+								"value": "TSN0012"
+							  },
+							  {
+								"label_id": "date_of_payment",
+								"value": "30-09-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "4,050.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "405.00"
+							  },
+							  {
+								"label_id": "tds_deposited",
+								"value": "405.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "24-10-2018"
+                              },
+                              {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    },
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+                            {
+								"label_id": "tsn_id",
+								"value": "TSN0156"
+							  },
+							  {
+								"label_id": "date_of_payment",
+								"value": "30-12-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "4,100.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "410.00"
+							  },
+							  {
+								"label_id": "tds_deposited",
+								"value": "410.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "18-01-2019"
+							  },
+                              {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    },
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+                             {
+								"label_id": "tsn_id",
+								"value": "TSN0987"
+							  },
+							  {
+								"label_id": "date_of_payment",
+								"value": "30-03-2019"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "4,150.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "415.00"
+							  },
+							  {
+								"label_id": "tds_deposited",
+								"value": "415.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "28-04-2019"
+							  },
+                              {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+                    
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "TDS-194A"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Interest other than interest on securities (Sec 194A)"
+							},
+							{
+								"label_id": "source",
+								"value": "State Bank of India (DELS1111A)"
+							},
+							{
+								"label_id": "count",
+								"value": "4"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Amount Paid/Credited"
+							},
+							{
+								"label_id": "info_value",
+								"value": "16,300.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "TDS-194IA (P)",
+				"part_type": "A",
+				"part_desc": "TDS/TCS Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Payment of consideration for purchase of immovable property (Section 194IA)",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "TSN Id",
+						"label_id": "tsn_id",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Acknowledgement Number",
+						"label_id": "acknowledgement_number",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Date of Payment/Credit",
+						"label_id": "date_of_payment",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Amount Paid/Credited",
+						"label_id": "amount_paid_credited",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "TDS Deducted",
+						"label_id": "tds_deducted",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "TDS Deposited",
+						"label_id": "tds_deposited",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Reported on",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "7"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "tsn_id",
+								"value": "TSN002490"
+                              },
+							  {
+								"label_id": "acknowledgement_number",
+								"value": "SN0137723"
+                              },
+							  {
+								"label_id": "date_of_payment_credit",
+								"value": "23-08-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "6,000,000.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "60,000.00"
+							  },
+							  {
+								"label_id": "TDS Deposited",
+								"value": "60,000.00.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "15-07-2018"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    },
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+                             {
+								"label_id": "tsn_id",
+								"value": "TSN004476"
+							  },
+                             {
+								"label_id": "acknowledgement_number",
+								"value": "BC0736510"
+							  },
+							  {
+								"label_id": "date_of_payment_credit",
+								"value": "30-09-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "6,055,000.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "60,550.00"
+							  },
+							  {
+								"label_id": "TDS Deposited",
+								"value": "60,550.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "22-02-2018"
+                              },
+                              {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "TDS-194IA (P)"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Payment of consideration for purchase of immovable property (Section 194IA)"
+							},
+							{
+								"label_id": "source",
+								"value": "Sadasivan Nair (RGBPD8448V)"
+							},
+							{
+								"label_id": "count",
+								"value": "2"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Annual Aggregated value of (Amount paid or credited)"
+							},
+							{
+								"label_id": "info_value",
+								"value": "12,055,000.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "TDS-194K",
+				"part_type": "A",
+				"part_desc": "TDS/TCS Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Income in respect of units of a mutual fund (Section 194K)",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "TSN Id",
+						"label_id": "tsn_id",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Acknowledgement Number",
+						"label_id": "acknowledgement_number",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Date of Payment/Credit",
+						"label_id": "date_of_payment",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Amount Paid/Credited",
+						"label_id": "amount_paid_credited",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "TDS Deducted",
+						"label_id": "tds_deducted",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "TDS Deposited",
+						"label_id": "tds_deposited",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Reported on",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "7"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "tsn_id",
+								"value": "TSN002376"
+                              },
+							  {
+								"label_id": "acknowledgement_number",
+								"value": "SN0137723"
+                              },
+							  {
+								"label_id": "date_of_payment_credit",
+								"value": "23-08-2018"
+							  },
+							  {
+								"label_id": "amount_paid_credited",
+								"value": "6,000,000.00"
+							  },
+							  {
+								"label_id": "tds_deducted",
+								"value": "60,000.00"
+							  },
+							  {
+								"label_id": "TDS Deposited",
+								"value": "60,000.00.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "15-07-2018"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "TDS-194K"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Income in respect of units of a mutual fund (Section 194K)"
+							},
+							{
+								"label_id": "source",
+								"value": "Axis Mutual Fund (BLRA6666E)"
+							},
+							{
+								"label_id": "count",
+								"value": "1"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Amount Paid/Credited"
+							},
+							{
+								"label_id": "info_value",
+								"value": "34,191.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "SFT-004",
+				"part_type": "B",
+				"part_desc": "SFT Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Income in respect of units of a mutual fund (Section 194K)",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "Account Number",
+						"label_id": "account_number",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Account Type",
+						"label_id": "account_type",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Account Relationship",
+						"label_id": "account_relationship",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Aggregate gross amount credited to the account in cash",
+						"label_id": "aggre_gross",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Reported On",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "7"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "account_number",
+								"value": "100236840123712"
+                              },
+							  {
+								"label_id": "account_type",
+								"value": "Savings"
+                              },
+							  {
+								"label_id": "account_relationship",
+								"value": "Savings Account"
+							  },
+							  {
+								"label_id": "aggre_gross",
+								"value": "250,000.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "25-01-2020"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "SFT-004"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Cash deposits in one or more accounts (other than a current account and time deposit) of a person"
+							},
+							{
+								"label_id": "source",
+								"value": "Axis Bank Ltd (AAACA1111K.AZ230)"
+							},
+							{
+								"label_id": "count",
+								"value": "1"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Annual Aggregated value of (Aggregate gross amount received from person in cash)"
+							},
+							{
+								"label_id": "info_value",
+								"value": "250,000.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "SFT-011",
+				"part_type": "B",
+				"part_desc": "SFT Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Purchase of foreign currency",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "Property Address",
+						"label_id": "property_address",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Property Type",
+						"label_id": "property_type",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Transaction Date",
+						"label_id": "transaction_date",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Transaction amount related to the Person",
+						"label_id": "trans_amt",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Transaction Value of Property",
+						"label_id": "trans_val",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Stamp Value of Property",
+						"label_id": "stam_value",
+						"datatype": "string",
+						"displayseq": "6"
+					},
+					{
+						"label": "Reported On",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "7"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "8"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "property_address",
+								"value": "3, Sharda Nagar, Bangalore, Karnataka"
+                              },
+							  {
+								"label_id": "property_type",
+								"value": "Residential Property"
+                              },
+							  {
+								"label_id": "transaction_date",
+								"value": "23-01-2020"
+							  },
+							  {
+								"label_id": "trans_amt",
+								"value": "12,055,000.00"
+							  },
+							  {
+								"label_id": "trans_val",
+								"value": "12,055,000.00"
+							  },
+							  {
+								"label_id": "stam_value",
+								"value": "12,055,000.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "31-05-2020"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "SFT-012 (S)"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Sale by any person of immovable property"
+							},
+							{
+								"label_id": "source",
+								"value": "SUB REGISTRAR OFFICE (BLRS88888C.ZX713)"
+							},
+							{
+								"label_id": "count",
+								"value": "1"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Annual Aggregated value of (Transaction amount related to the person)"
+							},
+							{
+								"label_id": "info_value",
+								"value": "9,300,121.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "SFT-012 (S)",
+				"part_type": "B",
+				"part_desc": "SFT Information",
+				"amount_sum":"57,000,00",
+				"info_desc": "Sale by any person of immovable property",
+				"smmry_header_field": [
+					{
+						"label": "Information Code",
+						"label_id": "info_code",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Information Description",
+						"label_id": "info_description",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Source",
+						"label_id": "source",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Count",
+						"label_id": "count",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Amount Description ",
+						"label_id": "amt_desc",
+						"datatype": "string",
+						"displayseq": "5"
+					},
+					{
+						"label": "Value",
+						"label_id": "info_value",
+						"datatype": "5",
+						"displayseq": "6"
+					},
+					{
+						"label": "Feedback Status",
+						"label_id": "feedback_status",
+						"datatype": "6",
+						"displayseq": "7"
+					}
+				],
+				"information_header_field": [
+					{
+						"label": "Property Address",
+						"label_id": "related_account_number",
+						"datatype": "string",
+						"displayseq": "1"
+					},
+					{
+						"label": "Property Type",
+						"label_id": "product_identifier",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Transaction Date",
+						"label_id": "last_date_Of_transaction",
+						"datatype": "string",
+						"displayseq": "2"
+					},
+					{
+						"label": "Transaction amount related to the Person",
+						"label_id": "aggre_gross",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Stamp Value of Property",
+						"label_id": "aggre_gross",
+						"datatype": "string",
+						"displayseq": "3"
+					},
+					{
+						"label": "Reported On",
+						"label_id": "reported_on",
+						"datatype": "string",
+						"displayseq": "4"
+					},
+					{
+						"label": "Feedback",
+						"label_id": "feedback",
+						"datatype": "string",
+						"displayseq": "7"
+					}
+				],
+				"active_trans": [
+					{
+						"tsn_seqid": "16",
+						"tsn_id": "117",
+						"orgl_rvsd_flag": "N",
+						"versn_num": "10.4",
+						"info_process_date": "16/04/2020",
+						"data": [
+							  {
+								"label_id": "related_account_number",
+								"value": "67856375634865"
+                              },
+							  {
+								"label_id": "product_identifier",
+								"value": "Foreign Currency"
+                              },
+							  {
+								"label_id": "last_date_Of_transaction",
+								"value": "27-01-2020"
+							  },
+							  {
+								"label_id": "aggre_gross",
+								"value": "100,000.00"
+							  },
+							  {
+								"label_id": "reported_on",
+								"value": "11-05-2020"
+							  },
+							  {
+								"label_id": "feedback",
+								"value": "active"
+							  }
+							
+						]
+                    }
+				],
+				"info_smry": [
+					{
+						"smry_id": "text",
+						"data": [
+							{
+								"label_id": "info_code",
+								"value": "SFT-012 (S)"
+							},
+							{
+								"label_id": "info_description",
+								"value": "Sale by any person of immovable property"
+							},
+							{
+								"label_id": "source",
+								"value": "SUB REGISTRAR OFFICE (BLRS88888C.ZX713)"
+							},
+							{
+								"label_id": "count",
+								"value": "1"
+							},
+							{
+								"label_id": "amt_desc",
+								"value": "Annual Aggregated value of (Transaction amount related to the person)"
+							},
+							{
+								"label_id": "info_value",
+								"value": "9,300,121.00"
+							},
+							{
+								"label_id": "feedback_status",
+								"value": "Submitted"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "Advance Tax",
+				"part_type": "C",
+				"part_desc": "Payment of Taxes",
+				"amount_sum":"12980",
+				"info_desc": "Rectification of error in challan uploaded by Bank",
+				"smmry_header_field": [
+					{
+						"label": "Minor Head",
+						"label_id": "minor_head",
+						"datatype": "text",
+						"displayseq": "1"
+					},
+					{
+						"label": "Tax",
+						"label_id": "tax_id",
+						"datatype": "number",
+						"displayseq": "2"
+					},
+					{
+						"label": "Surcharge",
+						"label_id": "surcharge_id",
+						"datatype": "number",
+						"displayseq": "3"
+					},
+					{
+						"label": "Health and Education Cess",
+						"label_id": "health_and_education_cess",
+						"datatype": "number",
+						"displayseq": "4"
+					},
+					{
+						"label": "Others",
+						"label_id": "others_id",
+						"datatype": "number",
+						"displayseq": "5"
+					},
+					{
+						"label": "Total Tax",
+						"label_id": "total_tax",
+						"datatype": "number",
+						"displayseq": "6"
+					},
+					{
+						"label": "BSR Code",
+						"label_id": "bsr_code",
+						"datatype": "number",
+						"displayseq": "7"
+					},
+					{
+						"label": "Date of Deposit",
+						"label_id": "date_of_deposit",
+						"datatype": "string",
+						"displayseq": "8"
+					},
+					{
+						"label": "Challan Serial Number",
+						"label_id": "challan_serial_number",
+						"datatype": "number",
+						"displayseq": "9"
+					},
+					{
+						"label": "Remarks",
+						"label_id": "remarks_id",
+						"datatype": "text",
+						"displayseq": "10"
+					}
+				],
+				"information_header_field": [],
+				"active_trans": [],
+				"info_smry": [
+					{
+						"smry_id": "l211",
+						"data": [
+							{
+								"label_id": "minor_head",
+								"value": "Advance Tax"
+							},
+							{
+								"label_id": "tax_id",
+								"value": "12000"
+							},
+							{
+								"label_id": "surcharge_id",
+								"value": "0"
+							},
+							{
+								"label_id": "health_and_education_cess",
+								"value": "480"
+							},
+							{
+								"label_id": "others_id",
+								"value": "500"
+							},
+							{
+								"label_id": "total_tax",
+								"value": "12980"
+							},
+							{
+								"label_id": "bsr_code",
+								"value": "0510001"
+							},
+							{
+								"label_id": "date_of_deposit",
+								"value": "15-12-2019"
+							},
+							{
+								"label_id": "challan_serial_number",
+								"value": "5035"
+							},
+							{
+								"label_id": "remarks_id",
+								"value": "Rectification of error in challan uploaded by Bank"
+							}
+						]
+					}
+				]
+			},
+			{
+				"info_code": "Self Assessment Tax",
+				"part_type": "C",
+				"part_desc": "Payment of Taxes",
+				"amount_sum":"5720",
+				"info_desc": "Payment of Taxes-Self Assessment Tax",
+				"smmry_header_field": [
+					{
+						"label": "Minor Head",
+						"label_id": "minor_head",
+						"datatype": "text",
+						"displayseq": "1"
+					},
+					{
+						"label": "Tax",
+						"label_id": "tax_id",
+						"datatype": "number",
+						"displayseq": "2"
+					},
+					{
+						"label": "Surcharge",
+						"label_id": "surcharge_id",
+						"datatype": "number",
+						"displayseq": "3"
+					},
+					{
+						"label": "Health and Education Cess",
+						"label_id": "health_and_education_cess",
+						"datatype": "number",
+						"displayseq": "4"
+					},
+					{
+						"label": "Others",
+						"label_id": "others_id",
+						"datatype": "number",
+						"displayseq": "5"
+					},
+					{
+						"label": "Total Tax",
+						"label_id": "total_tax",
+						"datatype": "number",
+						"displayseq": "6"
+					},
+					{
+						"label": "BSR Code",
+						"label_id": "bsr_code",
+						"datatype": "number",
+						"displayseq": "7"
+					},
+					{
+						"label": "Date of Deposit",
+						"label_id": "date_of_deposit",
+						"datatype": "string",
+						"displayseq": "8"
+					},
+					{
+						"label": "Challan Serial Number",
+						"label_id": "challan_serial_number",
+						"datatype": "number",
+						"displayseq": "9"
+					},
+					{
+						"label": "Remarks",
+						"label_id": "remarks_id",
+						"datatype": "text",
+						"displayseq": "10"
+					}
+				],
+				"information_header_field": [],
+				"active_trans": [],
+				"info_smry": [
+					{
+						"smry_id": "l220",
+						"data": [
+							{
+								"label_id": "minor_head",
+								"value": "Self Assessment Tax"
+							},
+							{
+								"label_id": "tax_id",
+								"value": "5500"
+							},
+							{
+								"label_id": "surcharge_id",
+								"value": "0"
+							},
+							{
+								"label_id": "health_and_education_cess",
+								"value": "220"
+							},
+							{
+								"label_id": "others_id",
+								"value": "0"
+							},
+							{
+								"label_id": "total_tax",
+								"value": "5720"
+							},
+							{
+								"label_id": "bsr_code",
+								"value": "0510001"
+							},
+							{
+								"label_id": "date_of_deposit",
+								"value": "10-04-2020"
+							},
+							{
+								"label_id": "challan_serial_number",
+								"value": "7890"
+							},
+							{
+								"label_id": "remarks_id",
+								"value": ""
+							}
+						]
+					}
+				]
+			}
+        ]
+    }
+}

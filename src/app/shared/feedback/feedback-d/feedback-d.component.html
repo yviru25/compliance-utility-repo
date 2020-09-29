@@ -1,21 +1,27 @@
-<div class="mat-table" *ngIf="duplicateDataList.length >= 1">
-  <section matSort class="mat-header-row">
-    <span class="mat-header-cell">
-      <mat-checkbox></mat-checkbox>
-    </span>
-    <span class="mat-header-cell" *ngFor="let l1hdr of l1header">
-      {{l1hdr.label}}
-    </span>
-  </section>
-  <section class="mat-row" *ngFor="let l1Item of duplicateDataList let i=index">
-    <span class="mat-cell">
-      <mat-checkbox></mat-checkbox>
-    </span>
-    <span class="mat-cell" *ngFor="let l1h of l1header">
-      {{l1Item[l1h.label_id]}}
-    </span>
-  </section>
-</div>
-<div class="notduplicate" *ngIf="duplicateDataList.length === 0">
+<mat-card class="duplicateTable" *ngIf="nestedData.rowData.length >= 1">
+  <p-table [value]="nestedData.rowData">
+    <ng-template pTemplate="header">
+        <tr>
+           <th style="width: 3rem">
+            <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+           </th>
+            <th *ngFor="let col of nestedData.columnDefs">
+              {{col.name}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-dupData>
+        <tr>
+            <td>
+              <p-tableCheckbox [value]="dupData"></p-tableCheckbox>
+            </td>
+            <td *ngFor="let col of nestedData.columnDefs" >
+               {{dupData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+</mat-card>
+<div class="notduplicate" *ngIf="nestedData.rowData.length === 0">
    <span style="color: crimson;">No Duplicate Data Found</span>
 </div>

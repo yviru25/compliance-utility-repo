@@ -1,29 +1,29 @@
 <div class="container-b">
-  <form class="example-form" novalidate>
+  <form [formGroup]="form" (ngSubmit)="submitData()"  class="example-form" novalidate>
     <div *ngFor="let m of metaInfo" >
-        <div *ngFor="let s of selectedDataList" [ngSwitch]="m.data_type">
+        <div *ngFor="let s of selectedDataList" [ngSwitch]="m.dataType">
             <div fxFlex="100" fxLayout="row">
               <div fxFlex="50">
-                  <label for="" style="color: #a2a1a1;">{{m.label}}</label>
+                  <label for="" style="color: #696969;">{{m.label}}</label>
               </div>
               <div fxFlex="50">
                 <mat-form-field *ngSwitchCase="'numeric'">
-                  <!-- <mat-label>{{m.label}}</mat-label> -->
-                  <!-- <span matPrefix>₹&nbsp;</span> -->
-                  <input type="text" numbersOnly matInput [value]="s[m.label_id]" autocomplete="off">
-                  
-                  <!-- <span matPrefix>{{}}</span> -->
+                  <input type="text" numbersOnly matInput [formControlName]="m.field" required="true" autocomplete="off">
+                </mat-form-field>
+                <mat-form-field *ngSwitchCase="'text'">
+                  <input type="text" [formControlName]="m.field" matInput [disabled]="true" required="true" autocomplete="off">
                 </mat-form-field>
                 <mat-form-field *ngSwitchCase="'date'">
-                  <!-- <input matInput type="date" [value]="date" /> -->
-                 <!--  <mat-label>{{m.label}}</mat-label> -->
-                  <input matInput [matDatepicker]="picker1" [value]="date" autocomplete="off" >
+                 <input matInput type="date" [formControlName]="m.field" required="true" /> 
+                 <!-- <mat-label>{{m.label}}</mat-label>  -->
+                  <!-- <input matInput [matDatepicker]="picker1" [value]="2018/10/05" autocomplete="off" >
                   <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                  <mat-datepicker #picker1></mat-datepicker>
+                  <mat-datepicker #picker1></mat-datepicker> -->
                 </mat-form-field>
               </div>
             </div>
         </div>
     </div>
+    <button fxLayoutAlign="end" mat-raised-button type="submit">Save Changes</button>
   </form>
 </div>

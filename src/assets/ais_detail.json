@@ -1,0 +1,1803 @@
+{
+    "ais": {
+        "type":"detail",
+        "finYear": "2018-19",
+        "assessmentYear": "2019-20",
+        "version": "1.0",
+        "aisId": "RGBPD8448V.01",
+        "revisionNo": "1",
+        "creationInfo": {
+            "createdBy": "Project Insight,ITD",
+            "createdDate": "08-04-2020 15:00:01"
+        },
+        "parts": [
+            {
+                "type": "GeneralInformation",
+                "description": "General Information",
+                "label":"A",
+                "labelDescription":"General Information",
+                "formInfo": {
+                    "label":"",
+                    "type":"VerticalLayout",   
+                     "elements": [
+                             {
+                                  "label":"",
+                                  "type":"HorizontalLayout",
+                                  "elements": [
+                                     {
+                                         "label": "Permanent Account Number (PAN)",
+                                         "type": "string",
+                                         "value": "RGBPD8448V"
+                                     },
+                                     {
+                                         "label": "Date of Birth",
+                                         "type": "date",
+                                         "value": "10-OCT-1986"
+                                     },
+                                     {
+                                         "label": "Aadhaar Number",
+                                         "type": "numeric",
+                                         "value": "2345-0953-8097"
+                                     }
+                                  ]
+                             },
+                             {
+                                  "type":"HorizontalLayout",
+                                  "label":"",
+                                  "elements": [
+                                      {
+                                          "label": "Mobile Number",
+                                          "type": "numeric",
+                                          "value": "9999999112"
+                                         
+                                      },
+                                      {
+                                          "label": "Name of Assessee",
+                                          "type": "string",
+                                          "value": "SADASIVAN NAIR"
+                                         
+                                      },
+                                      {
+                                          "label": "E-mail Address",
+                                          "type": "string",
+                                          "value": "SADASIVAN.NAIR@gmail.com"
+                                          
+                                      }
+                                  ]
+                             },
+                             {
+                                 "type":"HorizontalLayout",
+                                 "label":"",
+                                  "elements":[
+                                      {
+                                          "label": "Address of Assessee",
+                                          "type": "string",
+                                          "value": "28/16 UpkarBhawan, RAMNAGAR COLONY,Delhi"
+                                      }
+                                  ]
+                             }
+                         ]
+                },
+                "infoDtls": null,
+                "subParts": []
+            },
+            {
+                "type": "AISDetail",
+                "description": "AIS Detail",
+                "label":"B",
+                "labelDescription":"AIS Detail",
+                "formInfo": null,
+                "infoDtls": null,
+                "subParts": [
+                    {
+                        "type": "TDS/TCS",
+                        "description": "TDS/TCS Information",
+                        "label":"B1",
+                        "labelDescription":"Part B1- Information relating to Tax deducted/collected at source",
+                        "formInfo": null,
+                        "subParts": [],
+                        "infoDtls": {
+                            "columnDefs": [
+                                {
+                                    "name": "Information Category",
+                                    "field": "infoCategory",
+                                    "type": "string",
+                                    "seq": "1",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": false,
+                                        "sortable": false,
+                                        "toBeDisplayed": "Y"
+                                    }
+                                },
+                                {
+                                    "name": "Information Code",
+                                    "field": "infoCode",
+                                    "type": "string",
+                                    "seq": "2",
+                                    "controls": {
+                                        "width": 50,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Information Description",
+                                    "field": "infoDescription",
+                                    "type": "string",
+                                    "seq": "3",
+                                    "controls": {
+                                        "width": 120,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Information Source",
+                                    "field": "infoSource",
+                                    "type": "string",
+                                    "seq": "4",
+                                    "controls": {
+                                        "width": 50,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Count",
+                                    "field": "count",
+                                    "type": "numeric",
+                                    "seq": "5",
+                                    "controls": {
+                                        "width": 40,
+                                        "align": "center",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Amount Description ",
+                                    "field": "amtDesc",
+                                    "type": "string",
+                                    "seq": "6",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Amount",
+                                    "field": "amount",
+                                    "type": "numeric",
+                                    "seq": "7",
+                                    "controls": {
+                                        "width": 40,
+                                        "align": "center",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Feedback Status",
+                                    "field": "feedbackStatus",
+                                    "type": "string",
+                                    "seq": "8",
+                                    "controls": {
+                                        "width": 50,
+                                        "align": "center",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                }
+                            ],
+                            "data": [
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "infoCategory",
+                                            "value": "Salaries"
+                                        },
+                                        {
+                                            "field": "infoCode",
+                                            "value": "TDS-192"
+                                        },
+                                        {
+                                            "field": "infoDescription",
+                                            "value": "Salaries Received (Section 192)"
+                                        },
+                                        {
+                                            "field": "infoSource",
+                                            "value": "Punjab National Bank (TANXXXXXXX)"
+                                        },
+                                        {
+                                            "field": "count",
+                                            "value": "05"
+                                        },
+                                        {
+                                            "field": "amtDesc",
+                                            "value": "Amount Paid/Credited"
+                                        },
+                                        {
+                                            "field": "amount",
+                                            "value": "1,10,000"
+                                        },
+                                        {
+                                            "field": "feedbackStatus",
+                                            "value": "Submitted"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "infoCategory",
+                                            "value": "Dividend"
+                                        },
+                                        {
+                                            "field": "infoCode",
+                                            "value": "TDS-194"
+                                        },
+                                        {
+                                            "field": "infoDescription",
+                                            "value": "Dividend received (Section 194)"
+                                        },
+                                        {
+                                            "field": "infoSource",
+                                            "value": "ICICI Bank (TANXXXXXXX)"
+                                        },
+                                        {
+                                            "field": "count",
+                                            "value": "04"
+                                        },
+                                        {
+                                            "field": "amtDesc",
+                                            "value": "Amount Paid/Credited"
+                                        },
+                                        {
+                                            "field": "amount",
+                                            "value": "16,300.00"
+                                        },
+                                        {
+                                            "field": "feedbackStatus",
+                                            "value": "Partially submitted"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "nestedInformation": {
+                                "metaData": [
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "TDS-192"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Salaries"
+                                                }
+                                            ]
+                                        },
+                                        "columnDefs": [
+                                            {
+                                                "name": "TSN",
+                                                "field": "tsnId",
+                                                "type": "string",
+                                                "seq": "1",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Quarter",
+                                                "field": "quarter",
+                                                "type": "numeric",
+                                                "seq": "2",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Date of Payment/Credit",
+                                                "field": "dateOfPaymentCredit",
+                                                "type": "date",
+                                                "seq": "2",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Amount Paid/Credited",
+                                                "field": "amountPaidCredited",
+                                                "type": "numeric",
+                                                "seq": "3",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deducted",
+                                                "field": "tdsDeducted",
+                                                "type": "numeric",
+                                                "seq": "4",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "tdsDeposited",
+                                                "field": "tdsDeposited",
+                                                "type": "numeric",
+                                                "seq": "5",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Feedback",
+                                                "field": "feedbackStatus",
+                                                "type": "string",
+                                                "seq": "7",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "TDS-194"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Dividend"
+                                                }
+                                            ]
+                                        },
+                                        "columnDefs": [
+                                            {
+                                                "name": "TSN Id",
+                                                "field": "tsnId",
+                                                "type": "string",
+                                                "seq": "1",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Date of Payment/Credit",
+                                                "field": "dateOfPaymentCredit",
+                                                "type": "string",
+                                                "seq": "2",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Amount Paid/Credited",
+                                                "field": "amountPaidCredited",
+                                                "type": "string",
+                                                "seq": "3",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deducted",
+                                                "field": "tdsDeducted",
+                                                "type": "string",
+                                                "seq": "4",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deposited",
+                                                "field": "tdsDeposited",
+                                                "type": "string",
+                                                "seq": "5",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Feedback",
+                                                "field": "feedbackStatus",
+                                                "type": "string",
+                                                "seq": "7",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "data": [
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "TDS-192"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Salaries"
+                                                },
+                                                {
+                                                    "keyId": "infoSource",
+                                                    "keyValue": "Punjab National Bank (TANXXXXXXX)"
+                                                }
+                                            ]
+                                        },
+                                        "sourceData": [
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002495"
+                                                    },
+                                                    {
+                                                        "field":"quarter",
+                                                        "value": "Apr-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "active"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002490"
+                                                    },
+                                                    {
+                                                        "field":"quarter",
+                                                        "value": "May-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "active"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "TDS-194"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Dividend"
+                                                },
+                                                {
+                                                    "keyId": "infoSource",
+                                                    "keyValue": "ICICI Bank (TANXXXXXXX)"
+                                                }
+                                            ]
+                                        },
+                                        "sourceData": [
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002498"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "active"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002491"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "active"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "type": "SFT",
+                        "description": "SFT Information",
+                        "label":"B2",
+                        "labelDescription":"Part B2- Information relating to Specified Financial Transactions",
+                        "formInfo": null,
+                        "subParts": [],
+                        "infoDtls": {
+                            "columnDefs": [
+                                {
+                                    "name": "Information Category",
+                                    "field": "infoCategory",
+                                    "type": "string",
+                                    "seq": "1",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Information Code",
+                                    "field": "infoCode",
+                                    "type": "string",
+                                    "seq": "2",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Information Description",
+                                    "field": "infoDescription",
+                                    "type": "string",
+                                    "seq": "3",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Information Source",
+                                    "field": "infoSource",
+                                    "type": "string",
+                                    "seq": "4",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Count",
+                                    "field": "count",
+                                    "type": "string",
+                                    "seq": "5",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Amount Description ",
+                                    "field": "amt_desc",
+                                    "type": "string",
+                                    "seq": "6",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Amount",
+                                    "field": "amount",
+                                    "type": "numeric",
+                                    "seq": "7",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Feedback Status",
+                                    "field": "feedback_status",
+                                    "type": "string",
+                                    "seq": "8",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                }
+                            ],
+                            "data": [
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "infoCategory",
+                                            "value": "Cash Transactions"
+                                        },
+                                        {
+                                            "field": "infoCode",
+                                            "value": "SFT-004"
+                                        },
+                                        {
+                                            "field": "infoDescription",
+                                            "value": "Cash deposits in an account other than current account"
+                                        },
+                                        {
+                                            "field": "infoSource",
+                                            "value": "ICICI Bank (TANXXXXXXX)"
+                                        },
+                                        {
+                                            "field": "count",
+                                            "value": "01"
+                                        },
+                                        {
+                                            "field": "amt_desc",
+                                            "value": "Amount Paid/Credited"
+                                        },
+                                        {
+                                            "field": "amount",
+                                            "value": "13,10,000"
+                                        },
+                                        {
+                                            "field": "feedback_status",
+                                            "value": "Partially submitted"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "infoCategory",
+                                            "value": "Sale of Property"
+                                        },
+                                        {
+                                            "field": "infoCode",
+                                            "value": "SFT-012(R)"
+                                        },
+                                        {
+                                            "field": "infoDescription",
+                                            "value": "Time deposit"
+                                        },
+                                        {
+                                            "field": "infoSource",
+                                            "value": "Sale of immovable property"
+                                        },
+                                        {
+                                            "field": "count",
+                                            "value": "06"
+                                        },
+                                        {
+                                            "field": "amt_desc",
+                                            "value": "Amount Paid/Credited"
+                                        },
+                                        {
+                                            "field": "amount",
+                                            "value": "10,10,000"
+                                        },
+                                        {
+                                            "field": "feedback_status",
+                                            "value": "Pending"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "nestedInformation": {
+                                "metaData": [
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "SFT-012(R)"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Sale of Property"
+                                                }
+                                            ]
+                                        },
+                                        "columnDefs": [
+                                            {
+                                                "name": "TSN Id",
+                                                "field": "tsnId",
+                                                "type": "string",
+                                                "seq": "1",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Reported on",
+                                                "field": "reportedOn",
+                                                "type": "string",
+                                                "seq": "2",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Quarter",
+                                                "field": "quarter",
+                                                "type": "string",
+                                                "seq": "3",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Date of Payment/Credit",
+                                                "field": "dateOfPaymentCredit",
+                                                "type": "string",
+                                                "seq": "4",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Amount Paid/Credited",
+                                                "field": "amountPaidCredited",
+                                                "type": "string",
+                                                "seq": "5",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deducted",
+                                                "field": "tdsDeducted",
+                                                "type": "string",
+                                                "seq": "6",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "tdsDeposited",
+                                                "field": "tdsDeposited",
+                                                "type": "string",
+                                                "seq": "7",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Status",
+                                                "field": "status",
+                                                "type": "string",
+                                                "seq": "8",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Feedback",
+                                                "field": "feedbackStatus",
+                                                "type": "string",
+                                                "seq": "9",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "SFT-004"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Cash Transactions"
+                                                }
+                                            ]
+                                        },
+                                        "columnDefs": [
+                                            {
+                                                "name": "TSN Id",
+                                                "field": "tsnId",
+                                                "type": "string",
+                                                "seq": "1",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Date of Payment/Credit",
+                                                "field": "dateOfPaymentCredit",
+                                                "type": "string",
+                                                "seq": "2",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Amount Paid/Credited",
+                                                "field": "amountPaidCredited",
+                                                "type": "string",
+                                                "seq": "3",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deducted",
+                                                "field": "tdsDeducted",
+                                                "type": "string",
+                                                "seq": "4",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "TDS Deposited",
+                                                "field": "tdsDeposited",
+                                                "type": "string",
+                                                "seq": "5",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Reported on",
+                                                "field": "reportedOn",
+                                                "type": "string",
+                                                "seq": "6",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            },
+                                            {
+                                                "name": "Feedback",
+                                                "field": "feedbackStatus",
+                                                "type": "string",
+                                                "seq": "7",
+                                                "controls": {
+                                                    "width": 80,
+                                                    "align": "left",
+                                                    "filter": true,
+                                                    "sortable": false
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "data": [
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "SFT-004"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Cash Transactions"
+                                                },
+                                                {
+                                                    "keyId": "infoSource",
+                                                    "keyValue": "ICICI Bank (TANXXXXXXX)"
+                                                }
+                                            ]
+                                        },
+                                        "sourceData": [
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "1219000724065"
+                                                    },
+                                                    {
+                                                        "field": "reportedOn",
+                                                        "value": "18-05-2018"
+                                                    },
+                                                    {
+                                                        "field": "quarter",
+                                                        "value": "Apr-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "status",
+                                                        "value": "active"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "pending"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "1219000724066"
+                                                    },
+                                                    {
+                                                        "field": "reportedOn",
+                                                        "value": "18-05-2018"
+                                                    },
+                                                    {
+                                                        "field": "quarter",
+                                                        "value": "Apr-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "status",
+                                                        "value": "active"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "pending"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "mappingKey": {
+                                            "key": [
+                                                {
+                                                    "keyId": "infoCode",
+                                                    "keyValue": "SFT-012(R)"
+                                                },
+                                                {
+                                                    "keyId": "infoCategory",
+                                                    "keyValue": "Sale of Property"
+                                                },
+                                                {
+                                                    "keyId": "infoSource",
+                                                    "keyValue": "Sale of immovable property"
+                                                }
+                                            ]
+                                        },
+                                        "sourceData": [
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002490"
+                                                    },
+                                                    {
+                                                        "field": "reportedOn",
+                                                        "value": "18-05-2018"
+                                                    },
+                                                    {
+                                                        "field": "quarter",
+                                                        "value": "Apr-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "status",
+                                                        "value": "active"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "Pending"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "colData": [
+                                                    {
+                                                        "field": "tsnId",
+                                                        "value": "TSN002491"
+                                                    },
+                                                    {
+                                                        "field": "reportedOn",
+                                                        "value": "18-05-2018"
+                                                    },
+                                                    {
+                                                        "field": "quarter",
+                                                        "value": "Apr-Jun"
+                                                    },
+                                                    {
+                                                        "field": "dateOfPaymentCredit",
+                                                        "value": "23-08-2018"
+                                                    },
+                                                    {
+                                                        "field": "amountPaidCredited",
+                                                        "value": "6,000,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeducted",
+                                                        "value": "60,000.00"
+                                                    },
+                                                    {
+                                                        "field": "tdsDeposited",
+                                                        "value": "60,000.00.00"
+                                                    },
+                                                    {
+                                                        "field": "status",
+                                                        "value": "active"
+                                                    },
+                                                    {
+                                                        "field": "feedbackStatus",
+                                                        "value": "Pending"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "description": "Payment of Taxes",
+                        "label":"B3",
+                        "labelDescription":"Part B3- Information relating to Payment of Taxes",
+                        "formInfo": null,
+                        "subParts": [],
+                        "infoDtls": {
+                            "columnDefs": [
+                                {
+                                    "name": "Major Head",
+                                    "field": "majorHead",
+                                    "type": "string",
+                                    "seq": "1",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Minor Head",
+                                    "field": "minorHead",
+                                    "type": "string",
+                                    "seq": "2",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Tax",
+                                    "field": "tax",
+                                    "type": "string",
+                                    "seq": "3",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Surcharge Education",
+                                    "field": "surchargeEducation",
+                                    "type": "string",
+                                    "seq": "4",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Cess",
+                                    "field": "cess",
+                                    "type": "string",
+                                    "seq": "5",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Others",
+                                    "field": "others",
+                                    "type": "string",
+                                    "seq": "6",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Total Tax",
+                                    "field": "totalTax",
+                                    "type": "string",
+                                    "seq": "7",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Bsr Code",
+                                    "field": "bsrCode",
+                                    "type": "string",
+                                    "seq": "8",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Date Of Deposit",
+                                    "field": "dateOfDeposit",
+                                    "type": "string",
+                                    "seq": "9",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                },
+                                {
+                                    "name": "Challan Serial Number",
+                                    "field": "challanSerialNumber",
+                                    "type": "string",
+                                    "seq": "10",
+                                    "controls": {
+                                        "width": 80,
+                                        "align": "left",
+                                        "filter": true,
+                                        "sortable": false
+                                    }
+                                }
+                            ],
+                            "data": [
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "majorHead",
+                                            "value": "Income Tax"
+                                        },
+                                        {
+                                            "field": "minorHead",
+                                            "value": "Advance Tax"
+                                        },
+                                        {
+                                            "field": "tax",
+                                            "value": "12,000.00"
+                                        },
+                                        {
+                                            "field": "surchargeEducation",
+                                            "value": "0.00"
+                                        },
+                                        {
+                                            "field": "cess",
+                                            "value": "480.00"
+                                        },
+                                        {
+                                            "field": "others",
+                                            "value": "500.00"
+                                        },
+                                        {
+                                            "field": "totalTax",
+                                            "value": "12,980.00"
+                                        },
+                                        {
+                                            "field": "bsrCode",
+                                            "value": "0510001"
+                                        },
+                                        {
+                                            "field": "dateOfDeposit",
+                                            "value": "12/12/2019"
+                                        },
+                                        {
+                                            "field": "challanSerialNumber",
+                                            "value": "5035"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "colData": [
+                                        {
+                                            "field": "majorHead",
+                                            "value": "Income Tax"
+                                        },
+                                        {
+                                            "field": "minorHead",
+                                            "value": "Assessment Tax"
+                                        },
+                                        {
+                                            "field": "tax",
+                                            "value": "12,000.00"
+                                        },
+                                        {
+                                            "field": "surchargeEducation",
+                                            "value": "0.00"
+                                        },
+                                        {
+                                            "field": "cess",
+                                            "value": "480.00"
+                                        },
+                                        {
+                                            "field": "others",
+                                            "value": "500.00"
+                                        },
+                                        {
+                                            "field": "totalTax",
+                                            "value": "12,980.00"
+                                        },
+                                        {
+                                            "field": "bsrCode",
+                                            "value": "0510001"
+                                        },
+                                        {
+                                            "field": "dateOfDeposit",
+                                            "value": "12/12/2019"
+                                        },
+                                        {
+                                            "field": "challanSerialNumber",
+                                            "value": "5035"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "nestedInformation": null
+                        }
+                    },
+                    {
+                        "type": "DemandAndRefund",
+                        "description": "Demand and Refund",
+                        "label":"B4",
+                        "labelDescription":"Part D1. Information relating to Demand and Refund",
+                        "formInfo": null,
+                        "infoDtls": null,
+                        "subParts": [
+                            {
+                                "type": "Demand",
+                                "description": "Demand",
+                                "label":"B4.1",
+                                "labelDescription":"Part D1. Information relating to Demand",
+                                "formInfo": null,
+                                "subParts": [],
+                                "infoDtls": {
+                                    "columnDefs": [
+                                        {
+                                            "name": "Assessment Year",
+                                            "field": "assessmentYear",
+                                            "type": "string",
+                                            "seq": "1",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Demand Raised By",
+                                            "field": "demandRaisedBy",
+                                            "type": "string",
+                                            "seq": "2",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Section Code Under Which Demand Has Been Raised",
+                                            "field": "sectionCode",
+                                            "type": "string",
+                                            "seq": "3",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Demand Amount",
+                                            "field": "demandAccount",
+                                            "type": "string",
+                                            "seq": "4",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Interest Amount",
+                                            "field": "interestAmount",
+                                            "type": "string",
+                                            "seq": "5",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Status",
+                                            "field": "status",
+                                            "type": "string",
+                                            "seq": "6",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        }
+                                    ],
+                                    "data": [
+                                        {
+                                            "colData": [
+                                                {
+                                                    "field": "assessmentYear",
+                                                    "value": "2019"
+                                                },
+                                                {
+                                                    "field": "demandRaisedBy",
+                                                    "value": "ITO Ward 4(1), Lucknow"
+                                                },
+                                                {
+                                                    "field": "sectionCode",
+                                                    "value": "201"
+                                                },
+                                                {
+                                                    "field": "demandAccount",
+                                                    "value": "1,00,000"
+                                                },
+                                                {
+                                                    "field": "interestAmount",
+                                                    "value": "20,000"
+                                                },
+                                                {
+                                                    "field": "status",
+                                                    "value": "active"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "colData": [
+                                                {
+                                                    "field": "assessmentYear",
+                                                    "value": "2018"
+                                                },
+                                                {
+                                                    "field": "demandRaisedBy",
+                                                    "value": "ITO Ward 4(1), Lucknow"
+                                                },
+                                                {
+                                                    "field": "sectionCode",
+                                                    "value": "156"
+                                                },
+                                                {
+                                                    "field": "demandAccount",
+                                                    "value": "11,00,000"
+                                                },
+                                                {
+                                                    "field": "interestAmount",
+                                                    "value": "21,000"
+                                                },
+                                                {
+                                                    "field": "status",
+                                                    "value": "pending"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "nestedInformation": null
+                                }
+                            },
+                            {
+                                "type": "Refund",
+                                "description": "Refund",
+                                "label":"B4.2",
+                                "labelDescription":"Part D2- Information relating to Refund",
+                                "formInfo": null,
+                                "subParts": [],
+                                "infoDtls": {
+                                    "columnDefs": [
+                                        {
+                                            "name": "Assessment Year",
+                                            "field": "assessmentYear",
+                                            "type": "string",
+                                            "seq": "1",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Mode",
+                                            "field": "mode",
+                                            "type": "string",
+                                            "seq": "2",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Refund Issued",
+                                            "field": "refundIssued",
+                                            "type": "string",
+                                            "seq": "3",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Nature of Refund",
+                                            "field": "natureOfRefund",
+                                            "type": "string",
+                                            "seq": "4",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Amount of Refund",
+                                            "field": "amountOfRefund",
+                                            "type": "string",
+                                            "seq": "5",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Interest",
+                                            "field": "interest",
+                                            "type": "string",
+                                            "seq": "6",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Date of Payment",
+                                            "field": "dateOfPayment",
+                                            "type": "string",
+                                            "seq": "7",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        },
+                                        {
+                                            "name": "Remarks",
+                                            "field": "remarks",
+                                            "type": "string",
+                                            "seq": "8",
+                                            "controls": {
+                                                "width": 80,
+                                                "align": "left",
+                                                "filter": true,
+                                                "sortable": false
+                                            }
+                                        }
+                                    ],
+                                    "data": [
+                                        {
+                                            "colData": [
+                                                {
+                                                    "field": "assessmentYear",
+                                                    "value": "2019"
+                                                },
+                                                {
+                                                    "field": "mode",
+                                                    "value": "Cheque"
+                                                },
+                                                {
+                                                    "field": "refundIssued",
+                                                    "value": "10,23,000.00"
+                                                },
+                                                {
+                                                    "field": "natureOfRefund",
+                                                    "value": "ITR Refund"
+                                                },
+                                                {
+                                                    "field": "amountOfRefund",
+                                                    "value": "10,00,000"
+                                                },
+                                                {
+                                                    "field": "interest",
+                                                    "value": "23,000"
+                                                },
+                                                {
+                                                    "field": "dateOfPayment",
+                                                    "value": "10/06/2020"
+                                                },
+                                                {
+                                                    "field": "remarks",
+                                                    "value": "NA"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "colData": [
+                                                {
+                                                    "field": "assessmentYear",
+                                                    "value": "2020"
+                                                },
+                                                {
+                                                    "field": "mode",
+                                                    "value": "ECS"
+                                                },
+                                                {
+                                                    "field": "refundIssued",
+                                                    "value": "10,23,000.00"
+                                                },
+                                                {
+                                                    "field": "natureOfRefund",
+                                                    "value": "TDS Refund (RGBPD8448V)"
+                                                },
+                                                {
+                                                    "field": "amountOfRefund",
+                                                    "value": "10,00,000"
+                                                },
+                                                {
+                                                    "field": "interest",
+                                                    "value": "23,000"
+                                                },
+                                                {
+                                                    "field": "dateOfPayment",
+                                                    "value": "10/06/2020"
+                                                },
+                                                {
+                                                    "field": "remarks",
+                                                    "value": "NA"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "nestedInformation": null
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

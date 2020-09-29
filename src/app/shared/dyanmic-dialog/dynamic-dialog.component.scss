@@ -29,6 +29,11 @@ mat-dialog-content {
     color: #848688;
 }
 .main-section {
-    background: #eaeaea;
-    padding: 5px;
+    background: #f5f5f5;
+}
+
+.fix-radio-position .mat-expansion-panel
+.mat-expansion-panel-header mat-panel-description 
+.mat-radio-button {
+  line-height: 2;
 }

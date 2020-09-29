@@ -16,7 +16,7 @@ import { AadharMaskPipe } from '../../shared/pipes/adhar-mask.pipe';
 
 @NgModule({
   declarations: [AisComponent, DynamicDialogComponent,
-                 PopupMsgDialogComponent, DynamicFormComponent, BulkDialogComponent,
+                 DynamicFormComponent, BulkDialogComponent,
                  FeedbackBComponent, FeedbackDComponent, NumberDirective, AadharMaskPipe],
   imports: [
     CommonModule,
@@ -26,6 +26,6 @@ import { AadharMaskPipe } from '../../shared/pipes/adhar-mask.pipe';
     SharedModule
   ],
   providers: [CdkColumnDef],
-  entryComponents: [DynamicDialogComponent, BulkDialogComponent, PopupMsgDialogComponent]
+  entryComponents: [DynamicDialogComponent, BulkDialogComponent]
 })
 export class AisModule { }

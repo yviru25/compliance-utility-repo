@@ -1,507 +1,126 @@
-<div class="aiscontainer" style="padding: 10px 10px 10px 10px;">
- <!--  <table id="entydtls" style="width: 60%;">
-    <thead>
-      <tr>
-        <th class="text-left" style="width: 25%;">Permanent Account Number (PAN)</th>
-        <td class="text-left" style="width: 15%;">{{entityDtls.entity_id}}</td>
-        <th class="text-left" style="width: 15%;">Financial Year</th>
-        <td class="text-left" style="width: 15%;">{{basicDetails.fin_yr}}</td>
-        <th class="text-left" style="width: 15%;">Assessment Year</th>
-        <td class="text-left" style="width: 15%;">{{basicDetails.assmnt_yr}}</td>
-      </tr>
-   </thead>
-  </table><br> -->
-
-  <!-- <div class="container" fxLayout fxLayout.xs="column" 
-    fxLayoutGap="10px" fxLayoutGap.xs="0">
-    <div fxFlex="100" fxLayout="row">
-      <div fxFlex="70" class="info-list mx-2" fxLayoutAlign="center center">
-          <div fxFlex="40">
-            <input type="file" (change)="onFileSelected($event)" />
-          </div>
-          <div fxFlex="60">
-            <button mat-stroked-button style="height: fit-content;">Import</button>
-          </div>
-      </div>
-      <div fxFlex="30" class="info-list mx-2" fxLayoutAlign="end center">
-          <div fxFlex="60">
-           ( OR )
-          </div>
-          <div fxFlex="40" fxLayout="column" fxLayoutAlign="center center">
-            <span class="material-icons">
-              save_alt
-            </span>
-            <a href="javascript:void(0)" 
-               style="color: black;text-decoration: none;">DOWNLOAD AIS FILE</a>
-          </div>
-      </div>
-
+<div class="outerDiv">
+    <div class="card-header">
+      <h4 class="h4Class">{{aisPartADetails.description}}</h4>
     </div>
-  </div>
-  <div class="importedData">
-     <span>Financial year: </span>
-  </div> -->
-  <mat-tab-group mat-stretch-tabs [selectedIndex]="1">
-    <mat-tab label="Overview">
-      <mat-list>
-        <mat-list-item>
-          <p>
-            The Utility has been designed to enable taxpayers/intermediaries to view the 
-            Annual Information Statement (AIS)/e-Proceeding and provide feedback/response.
-          </p>
-        </mat-list-item>
-        
-        <h2 mat-subheader  style="color: black;">General Instructions</h2>
-        <mat-list-item>
-          <p>1. Kindly import the file into utility downloaded from Compliance portal only. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>2. A calendar is provided at each date field for selecting the date. Date should be in the format DD-MM-YYYY. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>3. All greyed out filed are either auto-filled or non-editable. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>4. It is a good practice to save your work frequently. Please use Save option for the same. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>5. While entering the information in relevant fields/tables provided in the utility, user can use following facility: </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>6. Kindly make sure there is no space before and after the text/information during copying such 
-            data from any other information source.Kindly check that the data is not pasted in exponential format. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>7. All numeric data to be rounded off as no decimal digits are allowed in the utility. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>8. Click on Export link to generate the file and save on desired path. </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>9. The generated/exported file should be uploaded on Compliance Portal ( <a href="https://compliance.insight.gov.in" target="_blank">https://compliance.insight.gov.in</a> ) </p>
-        </mat-list-item>
-        <mat-list-item>
-          <p>10. Once the file is submitted, an acknowledgement number will be generated for your future reference </p>
-        </mat-list-item>
-        <!-- <mat-list-item>
-          <mat-icon mat-list-icon>radio_button_checked</mat-icon>
-          <p mat-line> Import the JSON into Utility by clicking on relevant module.</p>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>radio_button_checked</mat-icon>
-          <p mat-line> Prepare the response packet.</p>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>radio_button_checked</mat-icon>
-          <p mat-line> Validate the details entered using 'validate' button.</p>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>radio_button_checked</mat-icon>
-          <p mat-line> Generate JSON using ' Generate JSON File to Upload' option.</p>
-        </mat-list-item>
-        <mat-list-item>
-          <mat-icon mat-list-icon>radio_button_checked</mat-icon>
-          <p mat-line> Upload the generated JSON on Compliance Portal.</p>
-        </mat-list-item> -->
-      </mat-list>
-    </mat-tab>
-    <mat-tab label="Annual Information Statement (AIS)">
-
-      <h4 style="color:#9b9b9b;margin-left: 20px;">General Information</h4>
-<div class="container borderBottom" fxLayout fxLayout.xs="column" fxLayoutAlign="center" 
-     fxLayoutGap="10px" fxLayoutGap.xs="0">
-  <div class="item item-4" fxFlex fxFlexOffset="50px"  fxFlexOffset.xs="0">
-    <div fxLayout="row">
-        <div fxFlex="10" fxLayoutAlign="start center">
-          <img src="assets/images/account.png" />
-        </div>
-        <div fxFlex="40" class="info-list mx-2" *ngFor="let item of [1,2,3] let j=index" >
-          <table style="border: 0px;" *ngFor="let ep of [1,2] let i=index">
-            <tr>
-             <!--  I > {{i}}
-              J > {{j}}
-              T > {{i+(j+1)}} -->
-              <th *ngIf="entityParticulars[i+(j+j)].particular_type === 'Aadhar'"  class="textAlignStart">{{entityParticulars[i+(j+j)].particular_type}}: </th>
-              <td *ngIf="entityParticulars[i+(j+j)].particular_type === 'Aadhar'">{{entityParticulars[i+(j+j)].value | aadharcardMask: 4}} </td>
-              <th *ngIf="entityParticulars[i+(j+j)].particular_type !== 'Aadhar'" class="textAlignStart">{{entityParticulars[i+(j+j)].particular_type}}: </th>
-              <td *ngIf="entityParticulars[i+(j+j)].particular_type !== 'Aadhar'">{{entityParticulars[i+(j+j)].value}} </td>
-            </tr>
-          </table>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="item item-5" fxFlex="400px">
-    <table style="width: 100%;">
-      <tr>
-        <th class="textAlignStart">Mobile</th>
-        <td>9841004125</td>
-      </tr>
-      <tr>
-        <th class="textAlignStart">Email</th>
-        <td>Jason.thomas@gmail.com</td>
-      </tr>
-      <tr>
-        <th class="textAlignStart">Address</th>
-        <td>#12, ACB Street, DFGH Nagar, GH, Chennai -600071</td>
-      </tr>
-    </table>
-  </div> -->
-</div>
-<mat-tab-group>
-  <mat-tab *ngFor="let l2List of groupByInfoCode | keyvalue" label="{{l2List.value[0].partDesc}}"  >
-    
-    <mat-accordion displayMode="flat" multi class="mat-table">
-      <section   matSort class="mat-elevation-z2 mat-header-row">
-        <span class="mat-header-cell" *ngFor="let hdr of l2List.value[0].infoSmryHeader">
-          {{hdr.label}}
-        </span>
-      </section>
-      <div *ngFor='let in of l2List.value ;let k = index'>
-      <mat-expansion-panel *ngFor="let item of l2List.value[k].infoSmryList let i=index">
-        <mat-expansion-panel-header class="mat-row">
-          <span class="mat-cell" *ngFor="let h of l2List.value[k].infoSmryHeader">
-            {{item[h.label_id]}}
-          </span>
-        </mat-expansion-panel-header>
-        <div class="mat-expand">
-          <section matSort class="mat-header-row">
-            <span class="mat-header-cell">
-              <mat-checkbox></mat-checkbox>
-            </span>
-            <span class="mat-header-cell" *ngFor="let l1hdr of l2List.value[k].infoL1SmryHdr">
-              {{l1hdr.label}}
-            </span>
-            <span class="mat-header-cell">
-              <a style="float: right;" href="javascript:void(0)" (click)="openDialog(l2List.value[k], l2List.value[k].infoL1SmryHdr, l2List.value[k].activeTrsnList)">
-                <img src="assets/images/register.png"/>
-              </a>
-            </span>
-          </section>
-          <section class="mat-row" *ngFor="let l1Item of l2List.value[k].activeTrsnList let i=index">
-            <span class="mat-cell">
-              <mat-checkbox (change)="checkBoxCheck($event,l2List.value[k].infoSmryList,l2List.value[k].activeTrsnList[i])"></mat-checkbox>
-            </span>
-            <span class="mat-cell" *ngFor="let l1h of l2List.value[k].infoL1SmryHdr">
-              {{l1Item[l1h.label_id]}}
-            </span>
-            <span class="mat-header-cell">
-            </span>
-          </section>
-        </div>
-    </mat-expansion-panel>  
-    </div>
-    </mat-accordion><br>
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <button mat-stroked-button style="height: fit-content;">Submit</button>
-      <mat-paginator (page)="pageEvent = OnPageChange($event,l2List.value)" [length]="l2List.value.length" [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-    </div>
-  </mat-tab>
-</mat-tab-group>
-
-    </mat-tab>
-    <mat-tab label="Questionnaire">
-      <div fxLayout="column" fxLayoutAlign="center center">
-        <h3>Work In-Progress</h3>
+  <mat-card>
+      <mat-card-content>
+         <div *ngIf="aisPartADetails.formInfo !== null" >
+             <div *ngFor="let item of aisPartADetails.formInfo.elements">
+                <div *ngIf="item.type === 'HorizontalLayout'" >
+                    <div fxFlex="100" fxLayout="row">
+                        <div fxFlex="40" *ngFor="let el of item.elements" >
+                              <label for="">{{el.label}}</label>
+                              <h4 class="h4Class">{{el.value}}</h4>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="item.type === 'VerticalLayout'">
+                  <div fxLayout="column">
+                    <div fxFlex *ngFor="let el of item.elements" >
+                          <label for="">{{el.label}}</label>
+                          <h4 class="h4Class">{{el.value}}</h4>
+                    </div>
+                  </div>
+                </div><br>
+             </div>
+         </div>
+      </mat-card-content>
+  </mat-card>
+  <div class="partBDiv">
+  <mat-tab-group>
+    <mat-tab *ngFor="let subParts of groupByPartLabel | keyvalue" [label]="subParts.value[0].description">
+      <div *ngFor="let item of subParts.value">
+         <mat-card *ngIf="item.subParts.length === 0">
+            <mat-card-subtitle style="color: cornflowerblue;">{{item.labelDescription}}</mat-card-subtitle>
+            <mat-card-content class="tableDiv">
+              <p-table [paginator]="false" [rows]="10" expandableRows="true" rowExpandMode="single" styleClass="p-datatable-sm" [columns]="item.columnDefs" [value]="item.rowData" dataKey="infoCode">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngIf="item.nestedInformation !== null"  style="width: 3rem"></th>
+                        <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                            {{col.name}} <p-sortIcon *ngIf="col.controls.sortable" [field]="col.field"></p-sortIcon>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-expanded="expanded" let-columns="columns">
+                    <tr>
+                        <td *ngIf="item.nestedInformation !== null">
+                          <a href="#" [pRowToggler]="rowData" (click)="expandRow(expanded)">
+                              <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+                          </a>
+                        </td>
+                        <td *ngFor="let col of columns" style="text-align: center;">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="rowexpansion" let-rowData let-i=rowIndex >
+                  <tr>
+                    <td [attr.colspan]="item.columnDefs.length+1">
+                        <div class="p-p-3">
+                          <p-table [value]="rowData.nestedInformation.rowData"  [(selection)]="selectedKeyInfo"  dataKey="tsnId">
+                            <ng-template pTemplate="header" let-rowIndex="rowIndex">
+                              <tr>
+                                <th style="width: 3rem;">
+                                  <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                                </th>
+                                <th *ngFor="let col of rowData.nestedInformation.columnDefs">
+                                  {{col.name}}
+                                </th>
+                                <th style="width: 2rem;">
+                                  <i class="pi pi-pencil" (click)="openDialog(item.columnDefs, rowData, rowData.nestedInformation.columnDefs, item.nestedInformation.data[i].mappingKey, rowData.nestedInformation)"></i>
+                                </th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-nestedInfo let-rowIndex="rowIndex" let-columns="columns">
+                              <tr>
+                                  <td>
+                                    <p-tableCheckbox [value]="nestedInfo" ></p-tableCheckbox>
+                                  </td>
+                                  <td *ngFor="let col of rowData.nestedInformation.columnDefs" style="text-align: center;">
+                                    {{ nestedInfo[col.field] }}
+                                  </td>
+                                  <td></td>
+                              </tr>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+            </mat-card-content>
+         </mat-card>
+         <div *ngIf="item.subParts.length > 0">
+              <mat-tab-group>
+                 <mat-tab *ngFor="let subPrts of item.subParts" [label]="subPrts.description">
+                    <mat-card class="tableDiv">
+                      <mat-card-subtitle style="color: cornflowerblue;">{{subPrts.labelDescription}}</mat-card-subtitle>
+                      <p-table [paginator]="false" [rows]="10" styleClass="p-datatable-sm" [columns]="subPrts.columnDefs" [value]="subPrts.rowData">
+                        <ng-template pTemplate="header" let-columns>
+                            <tr>
+                                <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                                    {{col.name}} <p-sortIcon *ngIf="col.controls.sortable" [field]="col.field"></p-sortIcon>
+                                </th>
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-subPartRD let-columns="columns">
+                          <tr>
+                              <td *ngFor="let col of columns" style="text-align: center;">
+                                  {{subPartRD[col.field]}}
+                              </td>
+                          </tr>
+                        </ng-template>
+                      </p-table>
+                    </mat-card>
+                 </mat-tab>
+              </mat-tab-group>
+         </div>
       </div>
     </mat-tab>
   </mat-tab-group>
-
-<!-- <mat-tab-group>
-  <mat-tab *ngFor="let l2List of groupByInfoCode | keyvalue " label="{{l2List.value[0].partDesc}}"  >
-    <mat-table #table [dataSource]="l2List.value">
-      <ng-container matColumnDef="infoCode" >
-        <mat-header-cell *matHeaderCellDef> Info Code </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.infoCode}} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="infoDesc"  >
-        <mat-header-cell *matHeaderCellDef> Info Description </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.infoDesc}} </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="amountSum" >
-        <mat-header-cell *matHeaderCellDef> Total Amount (Rs.) </mat-header-cell>
-        <mat-cell *matCellDef="let element"> {{element.amountSum}} </mat-cell>
-      </ng-container>
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
-    <mat-paginator [length]="l2List.value.length" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-  </mat-tab>
-</mat-tab-group> -->
-
-
-
-
-  <!-- <mat-accordion *ngFor="let l2List of groupByInfoCode | keyvalue " >
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          PART {{l2List.key}} - {{l2List.value[0].infoCodeName}}
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <table id="entydtls" style="width: 100%;">
-        <thead>
-          <tr>
-
-            <th>Info Code</th>
-            <th>Info Description</th> 
-            <th>Count</th>
-            <th>Total Amount (Rs.)</th>
-            <th>Amount Description</th>
-            <th style="width: 3%;"></th>
-          </tr>
-       </thead>
-        <tbody>
-            <tr *ngFor="let l2Item of l2List.value">
-              <td>{{l2Item.infoCode}}</td>
-              <td>{{l2Item.infoDesc}}</td>
-              <td><a href="javascript:void(0)" (click)="transDetails(l2Item.sumryId,l2Item.infoCode)" >{{l2Item.count}}</a></td>
-              <td>{{l2Item.value}}</td>
-              <td>{{l2Item.valueDesc}}</td>
-              <td>
-                <a href="javascript:void(0)">
-                  <span style="color: rgb(0, 96, 240);" class="material-icons">keyboard_arrow_right</span>
-                </a>
-              </td>
-            </tr>
-        </tbody>
-      </table>
-    </mat-expansion-panel>
-  </mat-accordion> -->
-
-</div>
-
-<!-- <div class="infodetails" *ngIf="isInfoDetails" >
-<h4>Information Details</h4>
-<table style="width: 100%;">
-   <thead>
-      <tr>
-        <th>Sr No.</th>
-        <th *ngFor="let hdr of trsnInfoHeader" >
-          {{hdr.label}}
-        </th>
-        <th style="width: 3%;"></th>
-      </tr>
-   </thead>
-   <tbody>
-        <tr  *ngFor="let item of actvList let i=index" >
-          <td>{{i+1}}</td>
-          <td *ngFor="let h of trsnInfoHeader" >
-            {{item[h.label_id]}}
-          </td>
-          <td>
-            <a href="javascript:void(0)" (click)="getAisOption()" >
-              <span style="color: rgb(0, 96, 240);" class="material-icons">keyboard_arrow_right</span>
-            </a>
-          </td>
-        </tr>
-   </tbody>
-</table>
-</div> -->
-
-<!-- <div *ngIf="isOption" style="width: 40%;">
-   
-  <mat-card *ngFor="let optns of optionList" style="margin-top: 10px;">
-    <a href="javascript:void(0)"(click)="getDynamicFormArray()" style="text-decoration: none; color: black;">
-      <span style="font-weight: bold;">{{optns.opt_code}}</span> - {{optns.opt_desc}}
-    </a>
-   </mat-card>
-</div> -->
-
-
-
-
-<!--  >>>>>>>>>>>>>>>>>>>>>> Form Test <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-<!-- <br><br><br>
-<h2 align="center">Dynamic Form Test</h2><br><br>
-<form [formGroup]="formTestField" 
-      autocomplete="off" novalidate (ngSubmit)="createOwner()" fxLayout="column wrap" fxLayoutGap="10px">
-  <mat-card-content *ngFor="let f of formArrayTest">
-    <div [ngSwitch]="f.inputType">
-      <mat-form-field *ngSwitchCase="'text'">
-        <input matInput *ngSwitchCase="'text'" formControlName="{{f.key}}" placeholder="{{f.label}}" name="{{f.key}}" type="{{f.inputType}}" required />
-      </mat-form-field>
-      <mat-form-field *ngSwitchCase="'select'">
-        <mat-label>{{f.label}}</mat-label>
-        <mat-select *ngSwitchCase="'select'" formControlName="{{f.key}}">
-          <mat-option *ngFor="let e of f.enum" value="{{e}}">{{e}}</mat-option>
-      </mat-select>
-      </mat-form-field>
-    </div>
-  </mat-card-content> 
-  <mat-card-actions align="center">
-    <button mat-raised-button color="primary" [disabled]="!formTestField.valid">Create</button>
-  </mat-card-actions>
-</form>-->
-
-
-
-
-
-<!--  >>>>>>>>>>>>>>>>>>>>>> Form Test Close <<<<<<<<<<<<<<<<<<<<<<<<<<< -->
-
-<!-- <div class="form-group" *ngFor="let f of formArrayTest" >
-  <div [ngSwitch]="f.inputType">
-    <div *ngSwitchCase="'text'">
-      <label>{{f.label}}</label>
-      <input *ngSwitchCase="'text'" name="{{f.key}}" type="{{f.inputType}}" > 
-    </div>
-    <div *ngSwitchCase="'select'">
-      <label>{{f.label}}</label>
-        <select *ngSwitchCase="'select'" name="{{f.key}}">
-            <option *ngFor="let e of f.enum" value="{{e}}">{{e}}</option>
-        </select> 
-    </div>
-    <div *ngSwitchCase="'textArea'">
-      <label>{{f.label}}</label>
-        <input *ngSwitchCase="'textArea'" name="{{f.key}}" type="{{f.inputType}}" > 
-    </div>
   </div>
-    
-</div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div fxFlex="100" *ngIf="isOption" >
-  <div fxFlex="85">
-      <div fxLayout="row" class="case-detail-wrapper" *ngFor="let optns of optionList">
-        <mat-card fxFlex="90" fxLayout="column"  style="margin-bottom: 10px;background: #f3f3f3;">
-          <span>{{optns.opt_desc}}</span>
-        </mat-card>
-        <div fxFlex="10" fxLayout="column" fxLayoutAlign="center">
-          <mat-icon style="-webkit-text-fill-color:#348eca;font-size: 28px;">info</mat-icon>
-        </div>
-      </div>
-      
   </div>
-
-</div> -->
-
-<!-- <h4>L3 Information</h4>
-<div class="l3InfomationContainer">
-
-  <div *ngFor="let l3InfoItem of l3InfoList" >
-      <mat-card fxFlex="50" style="margin-bottom: 15px;">
-        <div fxLayout="row" >
-          <a fxFlex="75" fxLayoutAlign="start center" class="cashdeposit-icons">
-          <p>({{l3InfoItem.info_code}})</p>
-          <p style="margin-left: 3px;">{{l3InfoItem.info_desc}}</p></a>
-          <a fxFlex="25" fxLayoutAlign="end center" class="amonut-heading">{{l3InfoItem.amountSum}}
-          <a class="arrow" href="javascript:void(0)">
-            <span style="color: white;" class="material-icons">keyboard_arrow_right</span>
-          </a></a>
-        </div>
-      </mat-card>
-  </div> -->
-
-<!-- </div> -->
-
-
-
-<!--  Version Depricated of AIS Display -->
-
-
-<!-- <div class="container-table">
-  <h4>Basic Details: {{aisForm}}</h4>
-  <table id="entydtls" style="width: 40%;">
-      <tbody>
-          <tr>
-            <th class="text-th">Pan</th>
-            <td class="text-left">{{entityDtls.entity_id}}</td>
-          </tr>
-          <tr>
-            <th class="text-th">Financial Year</th>
-            <td class="text-left">{{basicDetails.fin_yr}}</td>
-          </tr>
-          <tr>
-            <th class="text-th">Assessment Year</th>
-            <td class="text-left">{{basicDetails.assmnt_yr}}</td>
-          </tr>
-      </tbody>
-  </table>
-  <h4>Taxpare Details</h4>
-  <table id="taxpayerDtls" style="width: 40%;">
-      <tbody>
-          <tr>
-            <th class="text-th">Name</th>
-            <td class="text-left">{{entityDtls.entity_name}}</td>
-          </tr>
-          <tr>
-            <th class="text-th">Address</th>
-            <td class="text-left">{{entityDtls.entity_address.free_address}}</td>
-          </tr>
-          <tr>
-            <th class="text-th">Mobile Number</th>
-            <td class="text-left">{{entityDtls.mobile}}</td>
-          </tr>
-          <tr>
-            <th class="text-th">Email</th>
-            <td class="text-left">{{entityDtls.email}}</td>
-          </tr>
-      </tbody>
-  </table><br>
-  <h4>Information Details</h4>
-  <table style="width:100%">
-      <thead>
-         <tr>
-           <th>Info Code</th>
-           <th>Filer Id</th>
-           <th>Count</th>
-           <th>Amount Description</th>
-           <th>Amount (Rs.)</th>
-         </tr>
-      </thead>
-      <tbody>
-         <tr *ngFor="let flrList of filerList" >
-          <td>{{flrList.infoCode}}</td>
-          <td>{{flrList.filer_name}} ({{flrList.filer_id}})</td>
-          <td><a href="javascript:void(0)" (click)="transDetails(flrList.filer_smry_id,flrList.infoCode)">{{flrList.count_of_trans}}</a></td>
-          <td>{{flrList.infoDesc}}</td>
-          <td>{{flrList.amount}}</td>
-         </tr>
-      </tbody>
-  </table><br><br>
-  <h4>Transaction Details</h4>
-  <table style="width: 100%;">
-     <thead>
-        <tr>
-          <th *ngFor="let hdr of trsnInfoHeader" >
-            {{hdr.label}}
-          </th>
-        </tr>
-     </thead>
-     <tbody>
-          <tr  *ngFor="let item of actvList let i=index" >
-            <td *ngFor="let h of trsnInfoHeader" >
-              {{item[h.label_id]}}
-            </td>
-          </tr>
-     </tbody>
-  </table>
-  <h4>Early Transaction Details</h4>
-  <table style="width: 100%;">
-     <thead>
-        <tr>
-          <th *ngFor="let hdr of trsnInfoHeader" >
-            {{hdr.label}}
-          </th>
-        </tr>
-     </thead>
-     <tbody>
-          <tr  *ngFor="let item of inactvList let i=index" >
-            <td *ngFor="let h of trsnInfoHeader" >
-              {{item[h.label_id]}}
-            </td>
-          </tr>
-     </tbody>
-  </table>
-
-</div> -->
+  <div>
+    <h4>Selected Value:- {{selectedKeyInfo | json}}</h4>
+  </div>

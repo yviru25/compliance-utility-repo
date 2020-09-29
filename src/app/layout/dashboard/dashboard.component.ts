@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GridTile } from './../../shared/shared-model/grid-model-interface';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,12 +8,6 @@ import { GridTile } from './../../shared/shared-model/grid-model-interface';
   providers: []
 })
 export class DashboardComponent implements OnInit {
-
-  gridTileList = [
-    {moduleId: 1, moduleTitle: 'Annual Information Statement', cols: 1, rows: 2, icon: 'assets/images/lock.png'},
-    {moduleId: 2, moduleTitle: 'e-Campaign', cols: 1, rows: 2, icon: 'assets/images/emailer.png'},
-    {moduleId: 3, moduleTitle: 'e-Proceeding', cols: 1, rows: 2, icon: 'assets/images/e-verifaction.png'}
-  ];
 
   constructor(private route: Router) { }
 
